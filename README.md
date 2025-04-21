@@ -1,4 +1,7 @@
-# stocknet-dataset
+## data preprocessing
+
+### sentiment analysis
+## stocknet-dataset
 
 This repository releases a comprehensive dataset for stock movement prediction from tweets and historical stock prices. Please cite the following paper [[bib](https://aclanthology.info/papers/P18-1183/p18-1183.bib)] if you use this dataset,  
 
@@ -9,10 +12,10 @@ You might also be interested in [our code](https://github.com/yumoxu/stocknet-co
 
 Should you have any query please contact me at [yumo.xu@ed.ac.uk](mailto:yumo.xu@ed.ac.uk).
 
-## Dataset Overview
+### Dataset Overview
 Two-year price movements from 01/01/2014 to 01/01/2016 of 88 stocks are selected to target, coming from all the 8 stocks in the Conglomerates sector and the top 10 stocks in capital size in each of the other 8 sectors. The full list of 88 stocks and their companies selected from 9 sectors is available in **StockTable**, a facsimile of the paper appendix **appendix\_table\_of\_target\_stocks.pdf**.
 
-## Data Component
+### Data Component
 This dataset comprises two main components,
 
 * **./tweet**: tweet data from [Twitter](https://twitter.com/)
@@ -28,22 +31,22 @@ and
 * **./price/raw**  
 * **./price/preprocessed**
 
-## Data Format
+### Data Format
 
-### Raw Tweet Data
+#### Raw Tweet Data
 Format: JSON  
 Keys: see [Introduction to Tweet JSON](https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json
 )
 
-### Preprocessed Tweet Data
+#### Preprocessed Tweet Data
 Format: JSON  
 Keys: 'text', 'user\_id\_str', 'created\_at'
 
-### Raw Price Data
+#### Raw Price Data
 Format: CSV  
 Entries: date, open price, high price, low price, close price, adjust close price, volume  
 
-### Preprocessed Price Data
+#### Preprocessed Price Data
 Format: TXT  
 Entries: date, movement percent, open price, high price, low price, close price, volume  
 Note: *open, high, low, close prices are normalized values.*

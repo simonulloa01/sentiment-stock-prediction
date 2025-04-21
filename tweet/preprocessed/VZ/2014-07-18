@@ -1,2 +1,2 @@
-{"text": ["$", "vz", "stocks", "to", "watch", "this", "week", "$", "ois", "$", "ess", "$", "nuan", "wealthmanagement", "URL"], "created_at": "Fri Jul 18 10:29:31 +0000 2014", "user_id_str": "2714884144"}
-{"text": ["$", "vz", "stock", "market", "reports", "on", "stocks", "like", "$", "jdsu", "$", "dks", "$", "rt", "nasdaq", "URL"], "created_at": "Fri Jul 18 10:55:59 +0000 2014", "user_id_str": "2654343619"}
+{"text": ["$", "vz", "stocks", "to", "watch", "this", "week", "$", "ois", "$", "ess", "$", "nuan", "wealthmanagement", "URL"], "created_at": "Fri Jul 18 10:29:31 +0000 2014", "user_id_str": "2714884144", "sentiment": {"label": "neutral", "score": 0.9217396378517151}}
+{"text": ["$", "vz", "stock", "market", "reports", "on", "stocks", "like", "$", "jdsu", "$", "dks", "$", "rt", "nasdaq", "URL"], "created_at": "Fri Jul 18 10:55:59 +0000 2014", "user_id_str": "2654343619", "sentiment": {"label": "neutral", "score": 0.9186843633651733}}

@@ -1,1 +1,1 @@
-{"text": ["stock_tracker", ":", "intel", "corp", "(", "intc", ")", "34.54", "$", "intc", "market", "maker", "URL"], "created_at": "Wed Nov 05 11:40:44 +0000 2014", "user_id_str": "386787305"}
+{"text": ["stock_tracker", ":", "intel", "corp", "(", "intc", ")", "34.54", "$", "intc", "market", "maker", "URL"], "created_at": "Wed Nov 05 11:40:44 +0000 2014", "user_id_str": "386787305", "sentiment": {"label": "neutral", "score": 0.9399840235710144}}

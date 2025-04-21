@@ -1,3 +1,3 @@
-{"text": ["$", "ato", "is", "it", "breakout", "time", "on", "$", "intc", "$", "dei", "$", "wtw", "stockmarket", "URL"], "created_at": "Fri Mar 07 13:04:38 +0000 2014", "user_id_str": "2251958785"}
-{"text": ["intel", "corporation", ":", "rackhigh", "introduces", "updates", "to", "its", "dedicated", "server", "line", "URL", "$", "intc"], "created_at": "Fri Mar 07 19:30:04 +0000 2014", "user_id_str": "102325185"}
-{"text": ["$", "intc", "weakness", "to", "break", "above", "25.30", "$", "is", "bearish", "URL"], "created_at": "Fri Mar 07 09:59:42 +0000 2014", "user_id_str": "232503690"}
+{"text": ["$", "ato", "is", "it", "breakout", "time", "on", "$", "intc", "$", "dei", "$", "wtw", "stockmarket", "URL"], "created_at": "Fri Mar 07 13:04:38 +0000 2014", "user_id_str": "2251958785", "sentiment": {"label": "neutral", "score": 0.9196217060089111}}
+{"text": ["intel", "corporation", ":", "rackhigh", "introduces", "updates", "to", "its", "dedicated", "server", "line", "URL", "$", "intc"], "created_at": "Fri Mar 07 19:30:04 +0000 2014", "user_id_str": "102325185", "sentiment": {"label": "neutral", "score": 0.8221998810768127}}
+{"text": ["$", "intc", "weakness", "to", "break", "above", "25.30", "$", "is", "bearish", "URL"], "created_at": "Fri Mar 07 09:59:42 +0000 2014", "user_id_str": "232503690", "sentiment": {"label": "negative", "score": 0.866931140422821}}
