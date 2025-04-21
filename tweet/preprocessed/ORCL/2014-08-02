@@ -1,2 +1,2 @@
-{"text": ["$", "uthr", "pennystock", "research", "on", "$", "orcl", "$", "aapl", "$", "qlys", "singedinvestor", "URL"], "created_at": "Sat Aug 02 14:09:19 +0000 2014", "user_id_str": "2660399131"}
-{"text": ["are", "you", "considering", "selling", "$", "brcd", "$", "krc", "$", "orcl", "$", "aapl", "nse", "URL"], "created_at": "Sat Aug 02 14:02:12 +0000 2014", "user_id_str": "2663464848"}
+{"text": ["$", "uthr", "pennystock", "research", "on", "$", "orcl", "$", "aapl", "$", "qlys", "singedinvestor", "URL"], "created_at": "Sat Aug 02 14:09:19 +0000 2014", "user_id_str": "2660399131", "sentiment": {"label": "neutral", "score": 0.9261946678161621}}
+{"text": ["are", "you", "considering", "selling", "$", "brcd", "$", "krc", "$", "orcl", "$", "aapl", "nse", "URL"], "created_at": "Sat Aug 02 14:02:12 +0000 2014", "user_id_str": "2663464848", "sentiment": {"label": "neutral", "score": 0.9406028985977173}}

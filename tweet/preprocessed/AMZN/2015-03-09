@@ -1,3 +1,3 @@
-{"text": ["axiom", "initiates", "buy", "on", "URL", "inc", ";", "sees", "15", "%", "upside", "for", "the", "stock", "$", "amzn", "URL"], "created_at": "Mon Mar 09 17:33:45 +0000 2015", "user_id_str": "704897486"}
-{"text": ["how", "long", "before", "$", "amzn", "fire", "tv", "drops", "to", "$", "59", "?"], "created_at": "Mon Mar 09 17:17:04 +0000 2015", "user_id_str": "21793923"}
-{"text": ["$", "amzn", "stock", "quote", ",", "12:46", "pm", ":", "376.82", "-3.27", "(", "-0.86", "%", ")", "."], "created_at": "Mon Mar 09 17:01:46 +0000 2015", "user_id_str": "249924827"}
+{"text": ["axiom", "initiates", "buy", "on", "URL", "inc", ";", "sees", "15", "%", "upside", "for", "the", "stock", "$", "amzn", "URL"], "created_at": "Mon Mar 09 17:33:45 +0000 2015", "user_id_str": "704897486", "sentiment": {"label": "positive", "score": 0.9022643566131592}}
+{"text": ["how", "long", "before", "$", "amzn", "fire", "tv", "drops", "to", "$", "59", "?"], "created_at": "Mon Mar 09 17:17:04 +0000 2015", "user_id_str": "21793923", "sentiment": {"label": "negative", "score": 0.6874903440475464}}
+{"text": ["$", "amzn", "stock", "quote", ",", "12:46", "pm", ":", "376.82", "-3.27", "(", "-0.86", "%", ")", "."], "created_at": "Mon Mar 09 17:01:46 +0000 2015", "user_id_str": "249924827", "sentiment": {"label": "neutral", "score": 0.821363627910614}}

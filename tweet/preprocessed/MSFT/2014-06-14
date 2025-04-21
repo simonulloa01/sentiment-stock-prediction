@@ -1,4 +1,4 @@
-{"text": ["top", "expert", "consensus", "for", "$", "msft", "is", "hold", "URL"], "created_at": "Sat Jun 14 07:06:49 +0000 2014", "user_id_str": "725577499"}
-{"text": ["$", "msft", ":", "[", "video", "]", "strong", "pc", "demand", "picture", "URL"], "created_at": "Fri Jun 13 23:19:15 +0000 2014", "user_id_str": "2342531144"}
-{"text": ["microsoft", "and", "myanmar's", "company", "to", "provide", "it", "training", "$", "msft", "URL"], "created_at": "Sat Jun 14 21:29:42 +0000 2014", "user_id_str": "704897486"}
-{"text": ["$", "msft", ":", "brand", "death", ":", "microsoft", "will", "phase", "out", "iconic", "nokia", "brand", "name", "URL"], "created_at": "Fri Jun 13 22:43:33 +0000 2014", "user_id_str": "2341748448"}
+{"text": ["top", "expert", "consensus", "for", "$", "msft", "is", "hold", "URL"], "created_at": "Sat Jun 14 07:06:49 +0000 2014", "user_id_str": "725577499", "sentiment": {"label": "neutral", "score": 0.9276056885719299}}
+{"text": ["$", "msft", ":", "[", "video", "]", "strong", "pc", "demand", "picture", "URL"], "created_at": "Fri Jun 13 23:19:15 +0000 2014", "user_id_str": "2342531144", "sentiment": {"label": "positive", "score": 0.8487336039543152}}
+{"text": ["microsoft", "and", "myanmar's", "company", "to", "provide", "it", "training", "$", "msft", "URL"], "created_at": "Sat Jun 14 21:29:42 +0000 2014", "user_id_str": "704897486", "sentiment": {"label": "neutral", "score": 0.8830121755599976}}
+{"text": ["$", "msft", ":", "brand", "death", ":", "microsoft", "will", "phase", "out", "iconic", "nokia", "brand", "name", "URL"], "created_at": "Fri Jun 13 22:43:33 +0000 2014", "user_id_str": "2341748448", "sentiment": {"label": "negative", "score": 0.7583616375923157}}

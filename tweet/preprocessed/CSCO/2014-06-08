@@ -1,2 +1,2 @@
-{"text": ["$", "csco", "awesome", "stock", "research", "$", "ppg", "$", "dhr", "$", "df", "visit", "URL"], "created_at": "Sun Jun 08 11:57:40 +0000 2014", "user_id_str": "2540790335"}
-{"text": ["insider", "trading", "alerts", "on", "$", "tfx", "$", "pvh", "$", "csco", "$", "pcln", "newsletter", "URL"], "created_at": "Sun Jun 08 11:15:41 +0000 2014", "user_id_str": "2486821130"}
+{"text": ["$", "csco", "awesome", "stock", "research", "$", "ppg", "$", "dhr", "$", "df", "visit", "URL"], "created_at": "Sun Jun 08 11:57:40 +0000 2014", "user_id_str": "2540790335", "sentiment": {"label": "neutral", "score": 0.9336106181144714}}
+{"text": ["insider", "trading", "alerts", "on", "$", "tfx", "$", "pvh", "$", "csco", "$", "pcln", "newsletter", "URL"], "created_at": "Sun Jun 08 11:15:41 +0000 2014", "user_id_str": "2486821130", "sentiment": {"label": "neutral", "score": 0.8641223907470703}}

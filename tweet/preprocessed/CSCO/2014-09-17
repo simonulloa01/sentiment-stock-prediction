@@ -1,1 +1,1 @@
-{"text": ["$", "one", "tick", "click", "here", ":", "URL", "also", "see", ":", "$", "eww", "$", "fang", "$", "csco", "$", "amzn", "~"], "created_at": "Wed Sep 17 08:33:14 +0000 2014", "user_id_str": "2197078218"}
+{"text": ["$", "one", "tick", "click", "here", ":", "URL", "also", "see", ":", "$", "eww", "$", "fang", "$", "csco", "$", "amzn", "~"], "created_at": "Wed Sep 17 08:33:14 +0000 2014", "user_id_str": "2197078218", "sentiment": {"label": "neutral", "score": 0.9350919723510742}}

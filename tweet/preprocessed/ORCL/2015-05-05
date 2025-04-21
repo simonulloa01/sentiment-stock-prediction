@@ -1,1 +1,1 @@
-{"text": ["rt", "AT_USER", "so", "is", "$", "ibm", ",", "$", "orcl", "and", "$", "msft", "going", "to", "start", "a", "bidding", "war", "for", "URL"], "created_at": "Tue May 05 19:06:22 +0000 2015", "user_id_str": "1915114578"}
+{"text": ["rt", "AT_USER", "so", "is", "$", "ibm", ",", "$", "orcl", "and", "$", "msft", "going", "to", "start", "a", "bidding", "war", "for", "URL"], "created_at": "Tue May 05 19:06:22 +0000 2015", "user_id_str": "1915114578", "sentiment": {"label": "neutral", "score": 0.7956125736236572}}

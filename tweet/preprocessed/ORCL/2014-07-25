@@ -1,2 +1,2 @@
-{"text": ["$", "gpor", "get", "great", "research", "on", "stocks", "$", "orcl", "$", "ph", "$", "epzm", "liquidity", "URL"], "created_at": "Fri Jul 25 14:21:22 +0000 2014", "user_id_str": "2663489132"}
-{"text": ["sailing-european", "challengers", "commit", "to", "america's", "cup", "..", "URL", "$", "orcl", "tech", "stocks"], "created_at": "Fri Jul 25 17:29:14 +0000 2014", "user_id_str": "2459430642"}
+{"text": ["$", "gpor", "get", "great", "research", "on", "stocks", "$", "orcl", "$", "ph", "$", "epzm", "liquidity", "URL"], "created_at": "Fri Jul 25 14:21:22 +0000 2014", "user_id_str": "2663489132", "sentiment": {"label": "neutral", "score": 0.7735945582389832}}
+{"text": ["sailing-european", "challengers", "commit", "to", "america's", "cup", "..", "URL", "$", "orcl", "tech", "stocks"], "created_at": "Fri Jul 25 17:29:14 +0000 2014", "user_id_str": "2459430642", "sentiment": {"label": "neutral", "score": 0.8134076595306396}}

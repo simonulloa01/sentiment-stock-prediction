@@ -1,2 +1,2 @@
-{"text": ["$", "goog", "-", "proof", "that", "apple", ",", "inc", ".", "is", "investing", "in", "innovation", "->", "URL", "stock", "stocks", "stockaction"], "created_at": "Sun Jul 27 18:47:05 +0000 2014", "user_id_str": "2180886595"}
-{"text": ["rt", "AT_USER", "$", "61,200", ",", "000,000", "cash", "\u2014", "$", "goog", "URL"], "created_at": "Sun Jul 27 03:44:42 +0000 2014", "user_id_str": "1114237771"}
+{"text": ["$", "goog", "-", "proof", "that", "apple", ",", "inc", ".", "is", "investing", "in", "innovation", "->", "URL", "stock", "stocks", "stockaction"], "created_at": "Sun Jul 27 18:47:05 +0000 2014", "user_id_str": "2180886595", "sentiment": {"label": "neutral", "score": 0.9433208703994751}}
+{"text": ["rt", "AT_USER", "$", "61,200", ",", "000,000", "cash", "\u2014", "$", "goog", "URL"], "created_at": "Sun Jul 27 03:44:42 +0000 2014", "user_id_str": "1114237771", "sentiment": {"label": "neutral", "score": 0.9290479421615601}}

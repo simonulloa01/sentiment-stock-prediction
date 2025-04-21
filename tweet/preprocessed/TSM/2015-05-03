@@ -1,1 +1,1 @@
-{"text": ["hello", "from", "john", "$", "mon", "$", "tsm", "$", "sap", "financial", "moneymanagement", "budgettwit", "nse", ".", "take", "a", "look", "at", "URL"], "created_at": "Sun May 03 15:02:13 +0000 2015", "user_id_str": "3088825001"}
+{"text": ["hello", "from", "john", "$", "mon", "$", "tsm", "$", "sap", "financial", "moneymanagement", "budgettwit", "nse", ".", "take", "a", "look", "at", "URL"], "created_at": "Sun May 03 15:02:13 +0000 2015", "user_id_str": "3088825001", "sentiment": {"label": "neutral", "score": 0.9341846108436584}}

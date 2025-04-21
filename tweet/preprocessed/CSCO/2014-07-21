@@ -1,2 +1,2 @@
-{"text": ["whats", "going", "on", "with", "$", "gs", "$", "csco", "$", "ori", "$", "ir", "overvalued", "URL"], "created_at": "Mon Jul 21 08:33:16 +0000 2014", "user_id_str": "2660461525"}
-{"text": ["$", "vc", "awesome", "stock", "research", "$", "mro", "$", "csco", "$", "chtp", "equity", "rate_limit_exceeded"], "created_at": "Mon Jul 21 17:50:21 +0000 2014", "user_id_str": "2659786255"}
+{"text": ["whats", "going", "on", "with", "$", "gs", "$", "csco", "$", "ori", "$", "ir", "overvalued", "URL"], "created_at": "Mon Jul 21 08:33:16 +0000 2014", "user_id_str": "2660461525", "sentiment": {"label": "neutral", "score": 0.7166135311126709}}
+{"text": ["$", "vc", "awesome", "stock", "research", "$", "mro", "$", "csco", "$", "chtp", "equity", "rate_limit_exceeded"], "created_at": "Mon Jul 21 17:50:21 +0000 2014", "user_id_str": "2659786255", "sentiment": {"label": "neutral", "score": 0.9003295302391052}}
