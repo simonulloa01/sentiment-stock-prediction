@@ -5973,81 +5973,81 @@ Correlation between AAPL and T: -0.4078
 Correlation between AAPL and TSM: -0.1348
 Correlation between AAPL and VZ: -0.4997
 ----------------------------------------------
-Epoch 1, Loss: 319.5774
-Epoch 2, Loss: 318.9580
-Epoch 3, Loss: 318.5057
-Epoch 4, Loss: 318.1784
-Epoch 5, Loss: 317.9029
-Epoch 6, Loss: 317.6687
-Epoch 7, Loss: 317.6070
-Epoch 8, Loss: 317.3959
-Epoch 9, Loss: 317.2630
-Epoch 10, Loss: 317.0893
-Epoch 11, Loss: 316.8609
-Epoch 12, Loss: 316.5528
-Epoch 13, Loss: 316.1689
-Epoch 14, Loss: 315.8668
-Epoch 15, Loss: 315.5139
-Epoch 16, Loss: 315.4535
-Epoch 17, Loss: 314.8718
-Epoch 18, Loss: 314.3738
-Epoch 19, Loss: 313.9459
-Epoch 20, Loss: 313.2247
-Epoch 21, Loss: 312.6449
-Epoch 22, Loss: 312.1550
-Epoch 23, Loss: 311.0619
-Epoch 24, Loss: 310.7361
-Epoch 25, Loss: 309.8217
-Epoch 26, Loss: 308.9896
-Epoch 27, Loss: 308.2100
-Epoch 28, Loss: 307.0858
-Epoch 29, Loss: 306.3236
-Epoch 30, Loss: 305.2638
-Epoch 31, Loss: 304.5033
-Epoch 32, Loss: 304.1092
-Epoch 33, Loss: 303.3306
-Epoch 34, Loss: 302.6991
-Epoch 35, Loss: 302.0868
-Epoch 36, Loss: 301.4935
-Epoch 37, Loss: 300.5507
-Epoch 38, Loss: 300.2450
-Epoch 39, Loss: 299.3788
-Epoch 40, Loss: 299.2857
-Epoch 41, Loss: 298.5609
-Epoch 42, Loss: 298.9128
-Epoch 43, Loss: 298.9762
-Epoch 44, Loss: 297.8526
-Epoch 45, Loss: 296.8512
-Epoch 46, Loss: 296.6834
-Epoch 47, Loss: 296.2134
-Epoch 48, Loss: 295.8950
-Epoch 49, Loss: 295.4747
-Epoch 50, Loss: 295.2750
-Epoch 51, Loss: 294.7253
-Epoch 52, Loss: 293.5009
-Epoch 53, Loss: 294.1278
-Epoch 54, Loss: 293.8158
-Epoch 55, Loss: 292.5557
-Epoch 56, Loss: 293.3418
-Epoch 57, Loss: 297.0041
-Epoch 58, Loss: 294.9224
-Epoch 59, Loss: 291.8443
-Epoch 60, Loss: 292.5957
-Epoch 61, Loss: 295.1420
-Epoch 62, Loss: 292.6812
-Epoch 63, Loss: 292.4444
-Epoch 64, Loss: 292.4973
-Epoch 65, Loss: 290.8529
-Epoch 66, Loss: 291.3361
-Epoch 67, Loss: 293.3688
-Epoch 68, Loss: 290.6025
-Epoch 69, Loss: 288.7569
-Epoch 70, Loss: 288.6535
-Epoch 71, Loss: 286.7936
-Epoch 72, Loss: 287.8272
-Epoch 73, Loss: 287.9615
-Epoch 74, Loss: 290.6042
-Epoch 75, Loss: 288.1725
+Epoch 1, Loss: 319.3897
+Epoch 2, Loss: 318.9810
+Epoch 3, Loss: 318.4914
+Epoch 4, Loss: 317.9883
+Epoch 5, Loss: 317.9662
+Epoch 6, Loss: 317.7744
+Epoch 7, Loss: 317.5480
+Epoch 8, Loss: 317.0279
+Epoch 9, Loss: 316.7735
+Epoch 10, Loss: 316.8698
+Epoch 11, Loss: 316.3257
+Epoch 12, Loss: 315.8744
+Epoch 13, Loss: 315.4311
+Epoch 14, Loss: 315.0941
+Epoch 15, Loss: 314.8516
+Epoch 16, Loss: 314.1998
+Epoch 17, Loss: 313.5630
+Epoch 18, Loss: 313.4032
+Epoch 19, Loss: 312.8592
+Epoch 20, Loss: 312.2148
+Epoch 21, Loss: 312.0608
+Epoch 22, Loss: 311.4733
+Epoch 23, Loss: 310.6849
+Epoch 24, Loss: 310.4423
+Epoch 25, Loss: 309.1696
+Epoch 26, Loss: 309.1703
+Epoch 27, Loss: 307.9741
+Epoch 28, Loss: 307.1029
+Epoch 29, Loss: 306.7256
+Epoch 30, Loss: 306.3642
+Epoch 31, Loss: 305.3820
+Epoch 32, Loss: 304.6587
+Epoch 33, Loss: 304.1948
+Epoch 34, Loss: 303.3838
+Epoch 35, Loss: 303.1522
+Epoch 36, Loss: 302.4592
+Epoch 37, Loss: 301.7837
+Epoch 38, Loss: 301.7167
+Epoch 39, Loss: 300.8950
+Epoch 40, Loss: 300.3830
+Epoch 41, Loss: 299.1788
+Epoch 42, Loss: 298.8869
+Epoch 43, Loss: 298.0095
+Epoch 44, Loss: 297.0429
+Epoch 45, Loss: 296.5836
+Epoch 46, Loss: 295.9756
+Epoch 47, Loss: 295.2130
+Epoch 48, Loss: 294.9733
+Epoch 49, Loss: 294.1974
+Epoch 50, Loss: 293.9486
+Epoch 51, Loss: 293.8405
+Epoch 52, Loss: 292.8058
+Epoch 53, Loss: 292.2362
+Epoch 54, Loss: 292.2387
+Epoch 55, Loss: 291.2886
+Epoch 56, Loss: 290.8670
+Epoch 57, Loss: 290.4676
+Epoch 58, Loss: 289.7062
+Epoch 59, Loss: 289.0984
+Epoch 60, Loss: 288.7462
+Epoch 61, Loss: 288.2879
+Epoch 62, Loss: 288.0513
+Epoch 63, Loss: 287.3371
+Epoch 64, Loss: 287.3400
+Epoch 65, Loss: 287.0146
+Epoch 66, Loss: 286.4321
+Epoch 67, Loss: 285.9489
+Epoch 68, Loss: 285.6068
+Epoch 69, Loss: 284.8323
+Epoch 70, Loss: 284.7199
+Epoch 71, Loss: 283.7601
+Epoch 72, Loss: 284.2202
+Epoch 73, Loss: 282.9821
+Epoch 74, Loss: 282.8793
+Epoch 75, Loss: 282.9738
 
 Predictions for AAPL:
 Date: 2014-03-06, Prediction: 1.0000, Actual: 1.0
@@ -6070,13 +6070,13 @@ Date: 2014-03-28, Prediction: 1.0000, Actual: 1.0
 Date: 2014-03-31, Prediction: 1.0000, Actual: 1.0
 Date: 2014-04-01, Prediction: 1.0000, Actual: 0.0
 Date: 2014-04-02, Prediction: 1.0000, Actual: 0.0
-Date: 2014-04-03, Prediction: 1.0000, Actual: 0.0
+Date: 2014-04-03, Prediction: 0.0000, Actual: 0.0
 Date: 2014-04-04, Prediction: 1.0000, Actual: 0.0
 Date: 2014-04-07, Prediction: 1.0000, Actual: 1.0
 Date: 2014-04-08, Prediction: 1.0000, Actual: 0.0
 Date: 2014-04-09, Prediction: 1.0000, Actual: 0.0
 Date: 2014-04-10, Prediction: 1.0000, Actual: 1.0
-Date: 2014-04-11, Prediction: 1.0000, Actual: 0.0
+Date: 2014-04-11, Prediction: 0.0000, Actual: 0.0
 Date: 2014-04-14, Prediction: 1.0000, Actual: 1.0
 Date: 2014-04-15, Prediction: 1.0000, Actual: 1.0
 Date: 2014-04-16, Prediction: 1.0000, Actual: 1.0
@@ -6087,17 +6087,17 @@ Date: 2014-04-23, Prediction: 1.0000, Actual: 1.0
 Date: 2014-04-24, Prediction: 1.0000, Actual: 1.0
 Date: 2014-04-25, Prediction: 0.0000, Actual: 0.0
 Date: 2014-04-28, Prediction: 0.0000, Actual: 0.0
-Date: 2014-04-29, Prediction: 1.0000, Actual: 1.0
-Date: 2014-04-30, Prediction: 1.0000, Actual: 1.0
+Date: 2014-04-29, Prediction: 0.0000, Actual: 1.0
+Date: 2014-04-30, Prediction: 0.0000, Actual: 1.0
 Date: 2014-05-01, Prediction: 1.0000, Actual: 1.0
-Date: 2014-05-02, Prediction: 0.0000, Actual: 0.0
-Date: 2014-05-05, Prediction: 0.0000, Actual: 0.0
-Date: 2014-05-06, Prediction: 0.0000, Actual: 0.0
-Date: 2014-05-07, Prediction: 0.0000, Actual: 0.0
+Date: 2014-05-02, Prediction: 1.0000, Actual: 0.0
+Date: 2014-05-05, Prediction: 1.0000, Actual: 0.0
+Date: 2014-05-06, Prediction: 1.0000, Actual: 0.0
+Date: 2014-05-07, Prediction: 1.0000, Actual: 0.0
 Date: 2014-05-08, Prediction: 1.0000, Actual: 1.0
 Date: 2014-05-09, Prediction: 1.0000, Actual: 1.0
-Date: 2014-05-12, Prediction: 0.0000, Actual: 1.0
-Date: 2014-05-13, Prediction: 0.0000, Actual: 0.0
+Date: 2014-05-12, Prediction: 1.0000, Actual: 1.0
+Date: 2014-05-13, Prediction: 1.0000, Actual: 0.0
 Date: 2014-05-14, Prediction: 1.0000, Actual: 1.0
 Date: 2014-05-15, Prediction: 1.0000, Actual: 1.0
 Date: 2014-05-16, Prediction: 1.0000, Actual: 1.0
@@ -6120,7 +6120,7 @@ Date: 2014-06-10, Prediction: 1.0000, Actual: 0.0
 Date: 2014-06-11, Prediction: 1.0000, Actual: 0.0
 Date: 2014-06-12, Prediction: 1.0000, Actual: 1.0
 Date: 2014-06-13, Prediction: 1.0000, Actual: 0.0
-Date: 2014-06-16, Prediction: 0.0000, Actual: 1.0
+Date: 2014-06-16, Prediction: 1.0000, Actual: 1.0
 Date: 2014-06-17, Prediction: 1.0000, Actual: 0.0
 Date: 2014-06-18, Prediction: 1.0000, Actual: 0.0
 Date: 2014-06-19, Prediction: 0.0000, Actual: 0.0
@@ -6128,32 +6128,32 @@ Date: 2014-06-20, Prediction: 1.0000, Actual: 0.0
 Date: 2014-06-23, Prediction: 1.0000, Actual: 1.0
 Date: 2014-06-24, Prediction: 1.0000, Actual: 1.0
 Date: 2014-06-25, Prediction: 1.0000, Actual: 1.0
-Date: 2014-06-26, Prediction: 0.0000, Actual: 1.0
+Date: 2014-06-26, Prediction: 1.0000, Actual: 1.0
 Date: 2014-06-27, Prediction: 1.0000, Actual: 1.0
 Date: 2014-06-30, Prediction: 1.0000, Actual: 0.0
-Date: 2014-07-01, Prediction: 0.0000, Actual: 1.0
+Date: 2014-07-01, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-02, Prediction: 1.0000, Actual: 1.0
-Date: 2014-07-03, Prediction: 0.0000, Actual: 0.0
+Date: 2014-07-03, Prediction: 1.0000, Actual: 0.0
 Date: 2014-07-07, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-08, Prediction: 1.0000, Actual: 0.0
 Date: 2014-07-09, Prediction: 1.0000, Actual: 1.0
-Date: 2014-07-10, Prediction: 0.0000, Actual: 1.0
+Date: 2014-07-10, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-11, Prediction: 1.0000, Actual: 0.0
-Date: 2014-07-14, Prediction: 0.0000, Actual: 0.0
-Date: 2014-07-15, Prediction: 0.0000, Actual: 0.0
+Date: 2014-07-14, Prediction: 1.0000, Actual: 0.0
+Date: 2014-07-15, Prediction: 1.0000, Actual: 0.0
 Date: 2014-07-16, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-17, Prediction: 1.0000, Actual: 0.0
 Date: 2014-07-18, Prediction: 1.0000, Actual: 1.0
-Date: 2014-07-21, Prediction: 0.0000, Actual: 1.0
+Date: 2014-07-21, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-22, Prediction: 1.0000, Actual: 0.0
 Date: 2014-07-23, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-24, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-25, Prediction: 1.0000, Actual: 0.0
 Date: 2014-07-28, Prediction: 0.0000, Actual: 0.0
-Date: 2014-07-29, Prediction: 0.0000, Actual: 0.0
-Date: 2014-07-30, Prediction: 0.0000, Actual: 1.0
+Date: 2014-07-29, Prediction: 1.0000, Actual: 0.0
+Date: 2014-07-30, Prediction: 1.0000, Actual: 1.0
 Date: 2014-07-31, Prediction: 1.0000, Actual: 0.0
-Date: 2014-08-01, Prediction: 0.0000, Actual: 0.0
+Date: 2014-08-01, Prediction: 1.0000, Actual: 0.0
 Date: 2014-08-04, Prediction: 1.0000, Actual: 0.0
 Date: 2014-08-05, Prediction: 1.0000, Actual: 0.0
 Date: 2014-08-06, Prediction: 1.0000, Actual: 1.0
@@ -6168,7 +6168,7 @@ Date: 2014-08-18, Prediction: 1.0000, Actual: 1.0
 Date: 2014-08-19, Prediction: 1.0000, Actual: 1.0
 Date: 2014-08-20, Prediction: 1.0000, Actual: 1.0
 Date: 2014-08-21, Prediction: 1.0000, Actual: 1.0
-Date: 2014-08-22, Prediction: 0.0000, Actual: 0.0
+Date: 2014-08-22, Prediction: 1.0000, Actual: 0.0
 Date: 2014-08-25, Prediction: 1.0000, Actual: 1.0
 Date: 2014-08-26, Prediction: 1.0000, Actual: 1.0
 Date: 2014-08-27, Prediction: 1.0000, Actual: 1.0
@@ -6183,12 +6183,12 @@ Date: 2014-09-09, Prediction: 1.0000, Actual: 1.0
 Date: 2014-09-10, Prediction: 1.0000, Actual: 1.0
 Date: 2014-09-11, Prediction: 1.0000, Actual: 0.0
 Date: 2014-09-12, Prediction: 1.0000, Actual: 0.0
-Date: 2014-09-15, Prediction: 0.0000, Actual: 1.0
-Date: 2014-09-16, Prediction: 0.0000, Actual: 1.0
-Date: 2014-09-17, Prediction: 0.0000, Actual: 0.0
-Date: 2014-09-18, Prediction: 0.0000, Actual: 1.0
+Date: 2014-09-15, Prediction: 1.0000, Actual: 1.0
+Date: 2014-09-16, Prediction: 1.0000, Actual: 1.0
+Date: 2014-09-17, Prediction: 1.0000, Actual: 0.0
+Date: 2014-09-18, Prediction: 1.0000, Actual: 1.0
 Date: 2014-09-19, Prediction: 1.0000, Actual: 1.0
-Date: 2014-09-22, Prediction: 1.0000, Actual: 0.0
+Date: 2014-09-22, Prediction: 0.0000, Actual: 0.0
 Date: 2014-09-23, Prediction: 0.0000, Actual: 0.0
 Date: 2014-09-24, Prediction: 1.0000, Actual: 1.0
 Date: 2014-09-25, Prediction: 0.0000, Actual: 0.0
@@ -6204,40 +6204,40 @@ Date: 2014-10-08, Prediction: 0.0000, Actual: 0.0
 Date: 2014-10-09, Prediction: 0.0000, Actual: 0.0
 Date: 2014-10-10, Prediction: 0.0000, Actual: 0.0
 Date: 2014-10-13, Prediction: 0.0000, Actual: 0.0
-Date: 2014-10-14, Prediction: 0.0000, Actual: 0.0
+Date: 2014-10-14, Prediction: 1.0000, Actual: 0.0
 Date: 2014-10-15, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-16, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-17, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-20, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-21, Prediction: 1.0000, Actual: 1.0
-Date: 2014-10-22, Prediction: 0.0000, Actual: 1.0
+Date: 2014-10-22, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-23, Prediction: 1.0000, Actual: 0.0
 Date: 2014-10-24, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-27, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-28, Prediction: 1.0000, Actual: 0.0
 Date: 2014-10-29, Prediction: 1.0000, Actual: 1.0
-Date: 2014-10-30, Prediction: 0.0000, Actual: 1.0
+Date: 2014-10-30, Prediction: 1.0000, Actual: 1.0
 Date: 2014-10-31, Prediction: 0.0000, Actual: 0.0
-Date: 2014-11-03, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-04, Prediction: 0.0000, Actual: 0.0
-Date: 2014-11-05, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-06, Prediction: 0.0000, Actual: 0.0
-Date: 2014-11-07, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-10, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-11, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-12, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-13, Prediction: 0.0000, Actual: 0.0
-Date: 2014-11-14, Prediction: 0.0000, Actual: 1.0
+Date: 2014-11-03, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-04, Prediction: 1.0000, Actual: 0.0
+Date: 2014-11-05, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-06, Prediction: 1.0000, Actual: 0.0
+Date: 2014-11-07, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-10, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-11, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-12, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-13, Prediction: 1.0000, Actual: 0.0
+Date: 2014-11-14, Prediction: 1.0000, Actual: 1.0
 Date: 2014-11-17, Prediction: 0.0000, Actual: 0.0
-Date: 2014-11-18, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-19, Prediction: 0.0000, Actual: 1.0
-Date: 2014-11-20, Prediction: 0.0000, Actual: 1.0
+Date: 2014-11-18, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-19, Prediction: 1.0000, Actual: 1.0
+Date: 2014-11-20, Prediction: 1.0000, Actual: 1.0
 Date: 2014-11-21, Prediction: 0.0000, Actual: 0.0
 Date: 2014-11-24, Prediction: 0.0000, Actual: 1.0
 Date: 2014-11-25, Prediction: 0.0000, Actual: 0.0
 Date: 2014-11-26, Prediction: 0.0000, Actual: 0.0
 Date: 2014-11-28, Prediction: 0.0000, Actual: 0.0
-Date: 2014-12-01, Prediction: 1.0000, Actual: 1.0
+Date: 2014-12-01, Prediction: 0.0000, Actual: 1.0
 Date: 2014-12-02, Prediction: 0.0000, Actual: 0.0
 Date: 2014-12-03, Prediction: 0.0000, Actual: 0.0
 Date: 2014-12-04, Prediction: 0.0000, Actual: 0.0
@@ -6264,19 +6264,19 @@ Date: 2015-01-05, Prediction: 0.0000, Actual: 1.0
 Date: 2015-01-06, Prediction: 0.0000, Actual: 1.0
 Date: 2015-01-07, Prediction: 0.0000, Actual: 1.0
 Date: 2015-01-08, Prediction: 0.0000, Actual: 0.0
-Date: 2015-01-09, Prediction: 0.0000, Actual: 1.0
+Date: 2015-01-09, Prediction: 1.0000, Actual: 1.0
 Date: 2015-01-12, Prediction: 0.0000, Actual: 0.0
-Date: 2015-01-13, Prediction: 1.0000, Actual: 0.0
+Date: 2015-01-13, Prediction: 0.0000, Actual: 0.0
 Date: 2015-01-14, Prediction: 0.0000, Actual: 0.0
-Date: 2015-01-15, Prediction: 0.0000, Actual: 1.0
+Date: 2015-01-15, Prediction: 1.0000, Actual: 1.0
 Date: 2015-01-16, Prediction: 0.0000, Actual: 1.0
-Date: 2015-01-20, Prediction: 0.0000, Actual: 1.0
+Date: 2015-01-20, Prediction: 1.0000, Actual: 1.0
 Date: 2015-01-21, Prediction: 1.0000, Actual: 1.0
 Date: 2015-01-22, Prediction: 1.0000, Actual: 1.0
-Date: 2015-01-23, Prediction: 0.0000, Actual: 0.0
-Date: 2015-01-26, Prediction: 0.0000, Actual: 1.0
-Date: 2015-01-27, Prediction: 0.0000, Actual: 1.0
-Date: 2015-01-28, Prediction: 0.0000, Actual: 0.0
+Date: 2015-01-23, Prediction: 1.0000, Actual: 0.0
+Date: 2015-01-26, Prediction: 1.0000, Actual: 1.0
+Date: 2015-01-27, Prediction: 1.0000, Actual: 1.0
+Date: 2015-01-28, Prediction: 1.0000, Actual: 0.0
 Date: 2015-01-29, Prediction: 1.0000, Actual: 1.0
 Date: 2015-01-30, Prediction: 1.0000, Actual: 1.0
 Date: 2015-02-02, Prediction: 1.0000, Actual: 1.0
@@ -6287,21 +6287,21 @@ Date: 2015-02-06, Prediction: 1.0000, Actual: 1.0
 Date: 2015-02-09, Prediction: 1.0000, Actual: 1.0
 Date: 2015-02-10, Prediction: 1.0000, Actual: 1.0
 Date: 2015-02-11, Prediction: 1.0000, Actual: 1.0
-Date: 2015-02-12, Prediction: 0.0000, Actual: 1.0
-Date: 2015-02-13, Prediction: 0.0000, Actual: 1.0
-Date: 2015-02-17, Prediction: 0.0000, Actual: 0.0
-Date: 2015-02-18, Prediction: 0.0000, Actual: 1.0
+Date: 2015-02-12, Prediction: 1.0000, Actual: 1.0
+Date: 2015-02-13, Prediction: 1.0000, Actual: 1.0
+Date: 2015-02-17, Prediction: 1.0000, Actual: 0.0
+Date: 2015-02-18, Prediction: 1.0000, Actual: 1.0
 Date: 2015-02-19, Prediction: 1.0000, Actual: 1.0
-Date: 2015-02-20, Prediction: 0.0000, Actual: 0.0
-Date: 2015-02-23, Prediction: 0.0000, Actual: 0.0
-Date: 2015-02-24, Prediction: 0.0000, Actual: 1.0
-Date: 2015-02-25, Prediction: 0.0000, Actual: 0.0
-Date: 2015-02-26, Prediction: 0.0000, Actual: 1.0
-Date: 2015-02-27, Prediction: 0.0000, Actual: 1.0
+Date: 2015-02-20, Prediction: 1.0000, Actual: 0.0
+Date: 2015-02-23, Prediction: 1.0000, Actual: 0.0
+Date: 2015-02-24, Prediction: 1.0000, Actual: 1.0
+Date: 2015-02-25, Prediction: 1.0000, Actual: 0.0
+Date: 2015-02-26, Prediction: 1.0000, Actual: 1.0
+Date: 2015-02-27, Prediction: 1.0000, Actual: 1.0
 Date: 2015-03-02, Prediction: 0.0000, Actual: 0.0
-Date: 2015-03-03, Prediction: 0.0000, Actual: 0.0
+Date: 2015-03-03, Prediction: 1.0000, Actual: 0.0
 Date: 2015-03-04, Prediction: 0.0000, Actual: 1.0
-Date: 2015-03-05, Prediction: 0.0000, Actual: 1.0
+Date: 2015-03-05, Prediction: 1.0000, Actual: 1.0
 Date: 2015-03-06, Prediction: 0.0000, Actual: 0.0
 Date: 2015-03-09, Prediction: 0.0000, Actual: 0.0
 Date: 2015-03-10, Prediction: 0.0000, Actual: 1.0
@@ -6388,7 +6388,7 @@ Date: 2015-07-02, Prediction: 0.0000, Actual: 0.0
 Date: 2015-07-06, Prediction: 0.0000, Actual: 0.0
 Date: 2015-07-07, Prediction: 0.0000, Actual: 0.0
 Date: 2015-07-08, Prediction: 0.0000, Actual: 1.0
-Date: 2015-07-09, Prediction: 1.0000, Actual: 1.0
+Date: 2015-07-09, Prediction: 0.0000, Actual: 1.0
 Date: 2015-07-10, Prediction: 0.0000, Actual: 0.0
 Date: 2015-07-13, Prediction: 0.0000, Actual: 1.0
 Date: 2015-07-14, Prediction: 0.0000, Actual: 1.0
@@ -6421,8 +6421,8 @@ Date: 2015-08-19, Prediction: 0.0000, Actual: 0.0
 Date: 2015-08-20, Prediction: 0.0000, Actual: 0.0
 Date: 2015-08-21, Prediction: 1.0000, Actual: 1.0
 Date: 2015-08-24, Prediction: 1.0000, Actual: 1.0
-Date: 2015-08-25, Prediction: 1.0000, Actual: 1.0
-Date: 2015-08-26, Prediction: 1.0000, Actual: 1.0
+Date: 2015-08-25, Prediction: 0.0000, Actual: 1.0
+Date: 2015-08-26, Prediction: 0.0000, Actual: 1.0
 Date: 2015-08-27, Prediction: 0.0000, Actual: 0.0
 Date: 2015-08-28, Prediction: 0.0000, Actual: 0.0
 Date: 2015-08-31, Prediction: 0.0000, Actual: 1.0
@@ -6430,33 +6430,33 @@ Date: 2015-09-01, Prediction: 0.0000, Actual: 0.0
 Date: 2015-09-02, Prediction: 0.0000, Actual: 0.0
 Date: 2015-09-03, Prediction: 0.0000, Actual: 1.0
 Date: 2015-09-04, Prediction: 0.0000, Actual: 0.0
-Date: 2015-09-08, Prediction: 0.0000, Actual: 1.0
-Date: 2015-09-09, Prediction: 0.0000, Actual: 1.0
-Date: 2015-09-10, Prediction: 0.0000, Actual: 1.0
-Date: 2015-09-11, Prediction: 0.0000, Actual: 1.0
-Date: 2015-09-14, Prediction: 0.0000, Actual: 1.0
-Date: 2015-09-15, Prediction: 0.0000, Actual: 0.0
+Date: 2015-09-08, Prediction: 1.0000, Actual: 1.0
+Date: 2015-09-09, Prediction: 1.0000, Actual: 1.0
+Date: 2015-09-10, Prediction: 1.0000, Actual: 1.0
+Date: 2015-09-11, Prediction: 1.0000, Actual: 1.0
+Date: 2015-09-14, Prediction: 1.0000, Actual: 1.0
+Date: 2015-09-15, Prediction: 1.0000, Actual: 0.0
 Date: 2015-09-16, Prediction: 0.0000, Actual: 0.0
 Date: 2015-09-17, Prediction: 0.0000, Actual: 1.0
 Date: 2015-09-18, Prediction: 0.0000, Actual: 0.0
-Date: 2015-09-21, Prediction: 0.0000, Actual: 1.0
-Date: 2015-09-22, Prediction: 0.0000, Actual: 1.0
+Date: 2015-09-21, Prediction: 1.0000, Actual: 1.0
+Date: 2015-09-22, Prediction: 1.0000, Actual: 1.0
 Date: 2015-09-23, Prediction: 0.0000, Actual: 0.0
 Date: 2015-09-24, Prediction: 0.0000, Actual: 0.0
 Date: 2015-09-25, Prediction: 0.0000, Actual: 0.0
 Date: 2015-09-28, Prediction: 0.0000, Actual: 1.0
 Date: 2015-09-29, Prediction: 0.0000, Actual: 0.0
-Date: 2015-09-30, Prediction: 0.0000, Actual: 1.0
-Date: 2015-10-01, Prediction: 0.0000, Actual: 1.0
-Date: 2015-10-02, Prediction: 0.0000, Actual: 1.0
-Date: 2015-10-05, Prediction: 0.0000, Actual: 0.0
+Date: 2015-09-30, Prediction: 1.0000, Actual: 1.0
+Date: 2015-10-01, Prediction: 1.0000, Actual: 1.0
+Date: 2015-10-02, Prediction: 1.0000, Actual: 1.0
+Date: 2015-10-05, Prediction: 1.0000, Actual: 0.0
 Date: 2015-10-06, Prediction: 0.0000, Actual: 0.0
 Date: 2015-10-07, Prediction: 1.0000, Actual: 1.0
 Date: 2015-10-08, Prediction: 1.0000, Actual: 0.0
 Date: 2015-10-09, Prediction: 1.0000, Actual: 1.0
-Date: 2015-10-12, Prediction: 0.0000, Actual: 0.0
+Date: 2015-10-12, Prediction: 1.0000, Actual: 0.0
 Date: 2015-10-13, Prediction: 1.0000, Actual: 1.0
-Date: 2015-10-14, Prediction: 0.0000, Actual: 0.0
+Date: 2015-10-14, Prediction: 1.0000, Actual: 0.0
 Date: 2015-10-15, Prediction: 1.0000, Actual: 1.0
 Date: 2015-10-16, Prediction: 1.0000, Actual: 1.0
 Date: 2015-10-19, Prediction: 0.0000, Actual: 0.0
@@ -6465,13 +6465,13 @@ Date: 2015-10-21, Prediction: 1.0000, Actual: 1.0
 Date: 2015-10-22, Prediction: 1.0000, Actual: 0.0
 Date: 2015-10-23, Prediction: 1.0000, Actual: 0.0
 Date: 2015-10-26, Prediction: 1.0000, Actual: 1.0
-Date: 2015-10-27, Prediction: 0.0000, Actual: 1.0
-Date: 2015-10-28, Prediction: 0.0000, Actual: 0.0
-Date: 2015-10-29, Prediction: 0.0000, Actual: 1.0
-Date: 2015-10-30, Prediction: 0.0000, Actual: 1.0
+Date: 2015-10-27, Prediction: 1.0000, Actual: 1.0
+Date: 2015-10-28, Prediction: 1.0000, Actual: 0.0
+Date: 2015-10-29, Prediction: 1.0000, Actual: 1.0
+Date: 2015-10-30, Prediction: 1.0000, Actual: 1.0
 Date: 2015-11-02, Prediction: 0.0000, Actual: 0.0
 Date: 2015-11-03, Prediction: 0.0000, Actual: 0.0
-Date: 2015-11-04, Prediction: 0.0000, Actual: 1.0
+Date: 2015-11-04, Prediction: 1.0000, Actual: 1.0
 Date: 2015-11-05, Prediction: 0.0000, Actual: 0.0
 Date: 2015-11-06, Prediction: 0.0000, Actual: 0.0
 Date: 2015-11-09, Prediction: 0.0000, Actual: 0.0
@@ -6481,7 +6481,7 @@ Date: 2015-11-12, Prediction: 0.0000, Actual: 1.0
 Date: 2015-11-13, Prediction: 0.0000, Actual: 0.0
 Date: 2015-11-16, Prediction: 0.0000, Actual: 1.0
 Date: 2015-11-17, Prediction: 0.0000, Actual: 1.0
-Date: 2015-11-18, Prediction: 1.0000, Actual: 1.0
+Date: 2015-11-18, Prediction: 0.0000, Actual: 1.0
 Date: 2015-11-19, Prediction: 0.0000, Actual: 0.0
 Date: 2015-11-20, Prediction: 0.0000, Actual: 1.0
 Date: 2015-11-23, Prediction: 0.0000, Actual: 0.0
@@ -6501,15 +6501,15 @@ Date: 2015-12-11, Prediction: 0.0000, Actual: 0.0
 Date: 2015-12-14, Prediction: 0.0000, Actual: 1.0
 Date: 2015-12-15, Prediction: 0.0000, Actual: 0.0
 Date: 2015-12-16, Prediction: 0.0000, Actual: 0.0
-Date: 2015-12-17, Prediction: 1.0000, Actual: 1.0
-Date: 2015-12-18, Prediction: 1.0000, Actual: 0.0
+Date: 2015-12-17, Prediction: 0.0000, Actual: 1.0
+Date: 2015-12-18, Prediction: 0.0000, Actual: 0.0
 Date: 2015-12-21, Prediction: 0.0000, Actual: 1.0
 Date: 2015-12-22, Prediction: 0.0000, Actual: 0.0
 Date: 2015-12-23, Prediction: 0.0000, Actual: 0.0
 Date: 2015-12-24, Prediction: 0.0000, Actual: 1.0
-Date: 2015-12-28, Prediction: 1.0000, Actual: 0.0
-Date: 2015-12-29, Prediction: 1.0000, Actual: 0.0
+Date: 2015-12-28, Prediction: 0.0000, Actual: 0.0
+Date: 2015-12-29, Prediction: 0.0000, Actual: 0.0
 
-Accuracy: 0.6231 (286/459)
+Accuracy: 0.6645 (305/459)
 Class Breakdown:
-Correct Down: 179, Correct Up: 107
+Correct Down: 158, Correct Up: 147

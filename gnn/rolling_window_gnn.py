@@ -91,9 +91,43 @@ def generate_rolling_temporal_graphs(df, window_size=14, target_ticker="AAPL"):
             msg.append([corr])
             y.append(label)
         print("----------------------------------------------")
-        # Extract features for the current day
-        features_this_day = df_now.set_index('ticker').reindex(unique_tickers)[feature_cols].fillna(0)
+        rows = []
+        for ticker in unique_tickers:
+            history = df_window[df_window['ticker'] == ticker].sort_values('date')
+            today = df_now[df_now['ticker'] == ticker]
+
+            if today.empty or len(history) < window_size:
+                row = [0.0] * len(feature_cols)
+            else:
+                prices = history['close'].values
+                weights = range(1, window_size + 1)
+                wma = sum(p * w for p, w in zip(prices, weights)) / sum(weights)
+                sma = prices.mean()
+                vol = prices.std()
+                lag_1 = prices[-2] if window_size >= 2 else 0
+                lag_7 = prices[-8] if window_size >= 8 else 0
+
+                row = [
+                    today['open'].values[0],
+                    today['high'].values[0],
+                    today['low'].values[0],
+                    today['close'].values[0],
+                    today['volume'].values[0],
+                    wma,
+                    sma,
+                    lag_1,
+                    lag_7,
+                    vol,
+                    today['sentiment'].values[0] if 'sentiment' in today else 0
+                ]
+
+            rows.append(row)
+
+        # Ensure the number of rows = number of nodes
+        # features_this_day = torch.tensor(rows, dtype=torch.float)
+        features_this_day = pd.DataFrame(rows).fillna(0)
         x = torch.tensor(features_this_day.values, dtype=torch.float)
+
 
         # Create a PyTorch Geometric Data object
         data = Data(
