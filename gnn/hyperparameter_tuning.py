@@ -8,6 +8,22 @@ from torch_geometric.data import Data
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 
+# Define the Tee class to duplicate output
+class Tee:
+    def __init__(self, stream1, stream2):
+        self.stream1 = stream1
+        self.stream2 = stream2
+
+    def write(self, message):
+        self.stream1.write(message)
+        self.stream2.write(message)
+        self.stream1.flush() 
+        self.stream2.flush()
+
+    def flush(self):
+        self.stream1.flush()
+        self.stream2.flush()
+
 def generate_rolling_temporal_graphs(df, window_size=14):
     """
     Generate rolling temporal graphs for GNN training for the whole sector.
@@ -177,7 +193,8 @@ def train_gnn(model, data_list, ticker2id, epochs=5, learning_rate=0.001, curren
         
         avg_loss_epoch = total_loss / processed_nodes_count if processed_nodes_count > 0 else float('inf')
         train_losses.append(avg_loss_epoch)
-        print(f"Epoch {epoch+1}, Avg Loss: {avg_loss_epoch:.4f}")
+        if (epoch + 1) % 10 == 0 or epoch == epochs - 1:
+            print(f"Epoch {epoch+1}, Avg Loss: {avg_loss_epoch:.4f}")
 
     # Plotting loss for the current hyperparameter set
     if current_window_size_for_plot is not None and current_lr_for_plot is not None:
@@ -245,15 +262,15 @@ def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
 
 
 # hyperparameter tuning
-# output_log_file = open("hyperparameter_tuning_log.txt", "w")
-# original_stdout = sys.stdout
-# sys.stdout = output_log_file
+output_log_file = open("hyperparameter_tuning_log.txt", "w")
+original_stdout = sys.stdout
+sys.stdout = Tee(original_stdout, output_log_file) # Redirect stdout to Tee object
 
-df_full = pd.read_csv("../data/dataset.csv", sep="\t")
+df_full = pd.read_csv("../data/dataset.csv", sep="\\t")
 
-window_sizes_to_tune = [15, 30, 45, 60, 75, 90]
-learning_rates_to_tune = [0.001, 0.0005]
-epochs_for_tuning = 1000 
+window_sizes_to_tune = [15, 30, 60, 90]
+learning_rates_to_tune = [0.001]
+epochs_for_tuning = 1000
 
 best_accuracy = 0.0
 best_params = {}
@@ -289,10 +306,8 @@ for res in results:
     print(f"WS={res['window_size']}, LR={res['learning_rate']}, Final Loss={res['final_loss']:.4f}, Accuracy={res['accuracy']:.4f}")
 
 print(f"\nBest Accuracy: {best_accuracy:.4f}")
-print(f"Best Parameters: {best_params}")
+print(f"Best Parameters: {{best_params}}")
 
-# sys.stdout = original_stdout # Restore standard output
-# output_log_file.close()
 print("\n--- Running with Best Parameters (or default if tuning was skipped/failed) ---")
 
 # Use best_params found, or defaults if tuning didn't yield better ones or was skipped
@@ -314,7 +329,6 @@ else:
     print("\n--- Evaluating final model ---")
     evaluate_gnn(model_final, data_final, ticker2id_final)
 
-# Example of plotting overall accuracy vs epochs (requires manual data or more complex logging)
 # plt.clf()
 # plt.title("Accuracy vs Epochs (Example)")
 # plt.plot([10, 20, 30, 40, 50], [0.55, 0.60, 0.62, 0.65, 0.67]) # Placeholder data
@@ -323,4 +337,9 @@ else:
 # plt.savefig("final_accuracy_vs_epochs_example.png")
 # print("Saved example accuracy vs epochs plot.")
 
-print("\nHyperparameter tuning script finished.")
+print("\\nHyperparameter tuning script finished.")
+
+# Restore original stdout and close the file at the very end
+if isinstance(sys.stdout, Tee): # Check if stdout is our Tee object
+    sys.stdout = sys.stdout.stream1 # Restore original stdout
+output_log_file.close()

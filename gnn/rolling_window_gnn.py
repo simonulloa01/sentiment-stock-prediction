@@ -150,12 +150,12 @@ class StockPredictGNN(nn.Module): # Renamed from GOOG_GNN
         return torch.sigmoid(self.classifier(x)).squeeze(-1) # Output shape: [num_nodes]
 
 
-def train_gnn(model, data_list, ticker2id, epochs=5): # Removed target_ticker
+def train_gnn(model, data_list, ticker2id, epochs=5):
     """
-    Train the GNN model for the whole sector.
+    Train the GNN model
     """
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    loss_fn = nn.BCELoss(reduction='none') # Use reduction='none' to apply mask
+    loss_fn = nn.BCELoss(reduction='none') 
 
     for epoch in range(epochs):
         model.train()
@@ -163,15 +163,12 @@ def train_gnn(model, data_list, ticker2id, epochs=5): # Removed target_ticker
         processed_nodes_count = 0
 
         for data in data_list:
-            if data.edge_index.numel() == 0 and data.x.numel() > 0 : # Skip graphs with no edges if model requires them
-                 # TransformerConv might handle empty edge_index if x is not empty,
-                 # but typically GNNs expect connected components or at least some edges.
-                 # If your model can process nodes without edges, you might remove this check.
+            if data.edge_index.numel() == 0 and data.x.numel() > 0 :
                 print(f"Skipping training for graph at timestamp {data.timestamp.item()} due to no edges.")
                 continue
             
             optimizer.zero_grad()
-            out = model(data.x, data.edge_index, data.edge_attr) # out shape: [num_nodes]
+            out = model(data.x, data.edge_index, data.edge_attr) # out shape:[num_nodes]
             
             mask = data.valid_labels_mask
             if not mask.any(): # Skip if no valid labels in this graph
@@ -180,7 +177,7 @@ def train_gnn(model, data_list, ticker2id, epochs=5): # Removed target_ticker
             masked_out = out[mask]
             masked_labels = data.y[mask]
 
-            if masked_out.numel() == 0: # Should be caught by "if not mask.any()"
+            if masked_out.numel() == 0: 
                 continue
                 
             loss_per_node = loss_fn(masked_out, masked_labels)
@@ -199,7 +196,7 @@ def train_gnn(model, data_list, ticker2id, epochs=5): # Removed target_ticker
         print(f"Epoch {epoch+1}, Average Loss: {avg_loss:.4f}")
 
 
-def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
+def evaluate_gnn(model, data_list, ticker2id):
     """
     Evaluate the GNN model on the whole sector.
     """
@@ -215,7 +212,7 @@ def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
                 print(f"Skipping evaluation for graph at index {data_idx} (timestamp {data.timestamp.item()}) due to no edges.")
                 continue
 
-            out = model(data.x, data.edge_index, data.edge_attr) # out shape: [num_nodes]
+            out = model(data.x, data.edge_index, data.edge_attr) # out shape[num_nodes]
             
             mask = data.valid_labels_mask
             if not mask.any():
@@ -232,15 +229,9 @@ def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
             y_true_all.extend(masked_labels.tolist())
             y_pred_all.extend(pred_for_valid_nodes.tolist())
 
-            # Optional: Print summary for the day/graph
+            
             timestamp = data.timestamp.item()
             prediction_date_str = pd.to_datetime(timestamp, unit='s').strftime('%Y-%m-%d')
-            # Example: print for a few stocks or summary
-            # print(f"Graph for date (features from): {prediction_date_str} - Evaluated {masked_out.numel()} stocks")
-            # for i in range(min(3, masked_out.numel())): # Print for first 3 valid stocks in this graph
-            #     original_node_idx = torch.where(mask)[0][i].item() 
-            #     stock_name = id2ticker.get(original_node_idx, f"Unknown_ID_{original_node_idx}")
-            #     print(f"  Stock: {stock_name}, Pred: {pred_for_valid_nodes[i].item():.0f}, Actual: {masked_labels[i].item():.0f}, Prob: {masked_out[i]:.2f}")
 
 
     if not y_true_all:
