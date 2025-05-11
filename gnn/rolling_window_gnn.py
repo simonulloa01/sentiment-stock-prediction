@@ -6,6 +6,9 @@ from torch import nn
 from torch_geometric.nn import TransformerConv
 from torch_geometric.data import Data
 from scipy.stats import pearsonr
+import matplotlib.pyplot as plt
+import networkx as nx
+from torch_geometric.utils import to_networkx
 
 # Redirect standard output to a file
 output_file = open("rolling_window_output.txt", "w")
@@ -195,6 +198,30 @@ def train_gnn(model, data_list, ticker2id, epochs=5):
         avg_loss = total_loss / processed_nodes_count if processed_nodes_count > 0 else 0
         print(f"Epoch {epoch+1}, Average Loss: {avg_loss:.4f}")
 
+def visualize_first_graph(data_graphs, ticker2id):
+    if not data_graphs:
+        print("No graphs to visualize.")
+        return
+
+    data = data_graphs[0]
+    G = to_networkx(data, to_undirected=True, edge_attrs=["edge_attr"])
+
+    # Map node indices back to ticker labels
+    id2ticker = {v: k for k, v in ticker2id.items()}
+
+    # Format edge weights
+    edge_labels = {
+        (u, v): f"{attr['edge_attr'][0]:.2f}"
+        for u, v, attr in G.edges(data=True)
+    }
+
+    pos = nx.spring_layout(G, seed=42)
+    plt.figure(figsize=(12, 10))
+    nx.draw(G, pos, with_labels=True, labels=id2ticker, node_color='lightblue', node_size=1000, font_size=8)
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=7)
+    plt.title("First Graph Snapshot: Nodes and Pearson Correlation Edge Weights")
+    plt.axis('off')
+    plt.show()
 
 def evaluate_gnn(model, data_list, ticker2id):
     """
@@ -259,9 +286,10 @@ print(df.head())  # Ensure the DataFrame is loaded correctly
 
 # Generate graphs for the whole sector
 data, ticker2id = generate_rolling_temporal_graphs(df, window_size=30)
+visualize_first_graph(data, ticker2id)  # Visualize the first graph
 
 if not data:
-    print("No graph data was generated. Check dataset and parameters.")
+    print("No graphcd data was generated. Check dataset and parameters.")
     sys.stdout = sys.__stdout__
     output_file.close()
     sys.exit("Exiting due to no data.")
