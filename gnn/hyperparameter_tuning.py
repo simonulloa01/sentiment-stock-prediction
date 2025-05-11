@@ -8,105 +8,114 @@ from torch_geometric.data import Data
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 
-def generate_rolling_temporal_graphs(df, window_size=14, target_ticker="AAPL"):
+def generate_rolling_temporal_graphs(df, window_size=14):
     """
-    Generate rolling temporal graphs for GNN training.
+    Generate rolling temporal graphs for GNN training for the whole sector.
 
     Args:
         df (pd.DataFrame): The input DataFrame containing stock data.
         window_size (int): The number of days in the rolling window.
-        target_ticker (str): The ticker for which predictions are made.
 
     Returns:
         list: A list of PyTorch Geometric Data objects representing the graphs.
         dict: A mapping of tickers to node indices.
     """
     df = df.copy()
-    df['timestamp'] = pd.to_datetime(df['date']).astype(int) // 10**9  # Convert date to Unix timestamp
-    df = df.sort_values(by=['date', 'ticker'])  # Ensure data is sorted by date and ticker
+    df['timestamp'] = pd.to_datetime(df['date']).astype(int) // 10**9
+    df = df.sort_values(by=['date', 'ticker'])
 
-    unique_dates = sorted(df['date'].unique())  # Get all unique dates
-    unique_tickers = sorted(df['ticker'].unique())  # Get all unique tickers
-    ticker2id = {ticker: i for i, ticker in enumerate(unique_tickers)}  # Map tickers to node indices
-    num_nodes = len(unique_tickers)  # Total number of nodes (tickers)
+    unique_dates = sorted(df['date'].unique())
+    unique_tickers = sorted(df['ticker'].unique())
+    ticker2id = {ticker: i for i, ticker in enumerate(unique_tickers)}
+    num_nodes = len(unique_tickers)
 
-    # Ensure feature columns match the dataset
-    feature_cols = ['open', 'high', 'low', 'close', 'volume', 'wma_close', 'sma_close', 'lag_1_close', 'lag_7_close', 'volatility', 'sentiment']  # Features for each node
-    all_data = []  # List to store graph data
+    feature_cols = ['open', 'high', 'low', 'close', 'volume', 'wma_close', 'sma_close', 'lag_1_close', 'lag_7_close', 'volatility', 'sentiment']
+    all_data = []
 
     for i in range(window_size, len(unique_dates) - 1):
-        # Define the rolling window and the current/next dates
         window_dates = unique_dates[i - window_size:i]
         current_date = unique_dates[i]
         next_date = unique_dates[i + 1]
 
-        # Filter data for the rolling window, current date, and next date
         df_window = df[df['date'].isin(window_dates)]
         df_now = df[df['date'] == current_date]
         df_next = df[df['date'] == next_date]
 
-        # Skip if the target ticker is not present in the current or next date
-        if target_ticker not in df_now['ticker'].values or target_ticker not in df_next['ticker'].values:
+        if df_now.empty or df_next.empty:
+            continue
+        
+        labels_all_nodes_map = {row['ticker']: row['label'] for _, row in df_next.iterrows() if 'label' in row}
+        y_labels_tensor = torch.zeros(num_nodes, dtype=torch.float)
+        valid_labels_mask = torch.zeros(num_nodes, dtype=torch.bool)
+
+        for node_idx, ticker_name in enumerate(unique_tickers):
+            if ticker_name in labels_all_nodes_map:
+                y_labels_tensor[node_idx] = labels_all_nodes_map[ticker_name]
+                valid_labels_mask[node_idx] = True
+            else:
+                y_labels_tensor[node_idx] = 0.5 # Placeholder
+        
+        if not valid_labels_mask.any():
+            # print(f"Skipping graph for current date {current_date}: No valid labels for any stock on {next_date}")
             continue
 
-        # Get the label for the target ticker (up or down)
-        label = df_next[df_next['ticker'] == target_ticker]['label'].values[0]
-        timestamp = df_now['timestamp'].values[0]
+        timestamp = df_now['timestamp'].values[0] 
 
-        # Collect closing prices for all tickers in the rolling window
         closes = {
             ticker: df_window[df_window['ticker'] == ticker]['close'].values
             for ticker in unique_tickers
         }
 
-        # Get the closing prices for the target ticker
-        target_closes = closes[target_ticker]
-        if len(target_closes) != window_size:
-            continue
+        src_edges, dst_edges, edge_attr_list = [], [], []
+        
 
-        # Initialize graph components
-        src, dst, t, msg, y = [], [], [], [], []
-
-        # Print the rolling window and prediction date
-        # print(f"Prediction for {next_date}, using features from current date {current_date} and past window {window_dates[0]} to {window_dates[-1]}")
-
-        for ticker, close_vals in closes.items():
-            if ticker == target_ticker or len(close_vals) != window_size:
+        for ticker_i_idx, ticker_i_name in enumerate(unique_tickers):
+            if ticker_i_name not in closes or len(closes[ticker_i_name]) != window_size:
                 continue
-            # Calculate Pearson correlation between the target ticker and other tickers
-            corr, _ = pearsonr(close_vals, target_closes)
-            corr = 0.0 if pd.isna(corr) else corr
-
-            # Print the correlation for debugging
-            # print(f"Correlation between {target_ticker} and {ticker}: {corr:.4f}")
-
-            # Add edge information
-            src.append(ticker2id[ticker])
-            dst.append(ticker2id[target_ticker])
-            t.append(timestamp)
-            msg.append([corr])
-            y.append(label)
+            for ticker_j_idx, ticker_j_name in enumerate(unique_tickers):
+                if ticker_i_idx == ticker_j_idx:
+                    continue
+                if ticker_j_name not in closes or len(closes[ticker_j_name]) != window_size:
+                    continue
+                
+                try:
+                    corr, _ = pearsonr(closes[ticker_i_name], closes[ticker_j_name])
+                    corr = 0.0 if pd.isna(corr) else corr
+                except ValueError: 
+                    corr = 0.0
+                
+                src_edges.append(ticker_i_idx)
+                dst_edges.append(ticker_j_idx)
+                edge_attr_list.append([corr])
+        
         # print("----------------------------------------------")
-        # Extract features for the current day
         features_this_day = df_now.set_index('ticker').reindex(unique_tickers)[feature_cols].fillna(0)
         x = torch.tensor(features_this_day.values, dtype=torch.float)
 
-        # Create a PyTorch Geometric Data object
+        if not src_edges:
+            edge_index = torch.empty((2,0), dtype=torch.long)
+            edge_attr = torch.empty((0,1), dtype=torch.float)
+            # print(f"Warning: No edges created for graph on {current_date}.")
+        else:
+            edge_index = torch.tensor([src_edges, dst_edges], dtype=torch.long)
+            edge_attr = torch.tensor(edge_attr_list, dtype=torch.float)
+
         data = Data(
             x=x,
-            edge_index=torch.tensor([src, dst], dtype=torch.long),
-            edge_attr=torch.tensor(msg, dtype=torch.float),
-            y=torch.tensor(y, dtype=torch.float),
-            timestamp=torch.tensor([timestamp], dtype=torch.long)
+            edge_index=edge_index,
+            edge_attr=edge_attr,
+            y=y_labels_tensor, 
+            timestamp=torch.tensor([timestamp], dtype=torch.long),
+            valid_labels_mask=valid_labels_mask
         )
         all_data.append(data)
 
     return all_data, ticker2id
 
 
-class AAPL_GNN(nn.Module):
+class StockPredictGNN(nn.Module): # Renamed from AAPL_GNN
     """
-    A simple GNN model for predicting stock movements for AAPL.
+    A GNN model for predicting stock movements for multiple stocks (sector).
     """
     def __init__(self, in_channels, edge_dim):
         super().__init__()
@@ -120,121 +129,198 @@ class AAPL_GNN(nn.Module):
         """
         x = self.conv1(x, edge_index, edge_attr).relu()
         x = self.conv2(x, edge_index, edge_attr).relu()
-        return torch.sigmoid(self.classifier(x)).squeeze()
+        return torch.sigmoid(self.classifier(x)).squeeze(-1) # Output shape: [num_nodes]
 
 
-def train_gnn(model, data_list, ticker2id, target_ticker="AAPL", epochs=5, learning_rate=0.001):
+def train_gnn(model, data_list, ticker2id, epochs=5, learning_rate=0.001, current_window_size_for_plot=None, current_lr_for_plot=None): # Removed target_ticker, added params for plotting
     """
-    Train the GNN model.
-
-    Args:
-        model (nn.Module): The GNN model.
-        data_list (list): List of graph data objects.
-        ticker2id (dict): Mapping of tickers to node indices.
-        target_ticker (str): The target ticker for predictions.
-        epochs (int): Number of training epochs.
+    Train the GNN model for the whole sector.
     """
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-    loss_fn = nn.BCELoss()
-    target_idx = ticker2id[target_ticker]
+    loss_fn = nn.BCELoss(reduction='none') 
+    
     train_losses = []
     for epoch in range(epochs):
         model.train()
         total_loss = 0
+        processed_nodes_count = 0
 
         for data in data_list:
+            if data.edge_index.numel() == 0 and data.x.numel() > 0 :
+                # print(f"Skipping training for graph at timestamp {data.timestamp.item()} due to no edges.")
+                continue
+            
             optimizer.zero_grad()
-            out = model(data.x, data.edge_index, data.edge_attr)
-            pred = out[target_idx]
-            label = data.y[0]
-            loss = loss_fn(pred.unsqueeze(0), label.unsqueeze(0))
+            out = model(data.x, data.edge_index, data.edge_attr) 
+            
+            mask = data.valid_labels_mask
+            if not mask.any(): 
+                continue
+
+            masked_out = out[mask]
+            masked_labels = data.y[mask]
+
+            if masked_out.numel() == 0: 
+                continue
+                
+            loss_per_node = loss_fn(masked_out, masked_labels)
+            loss = loss_per_node.mean() 
+
+            if torch.isnan(loss) or torch.isinf(loss):
+                # print(f"Warning: NaN or Inf loss encountered. Skipping batch. Out: {masked_out}, Labels: {masked_labels}")
+                continue
+
             loss.backward()
             optimizer.step()
-            total_loss += loss.item()
-        train_losses.append(total_loss)
-        print(f"Epoch {epoch+1}, Loss: {total_loss:.4f}")
-    plt.clf()
-    plt.title("Loss Graph for GNN")
-    plt.plot([i for i in range(epochs)], train_losses)
-    plt.xlabel("Epochs")
-    plt.ylabel("Loss")
-    plt.savefig(f"loss.png")
+            total_loss += loss.item() * masked_out.numel() 
+            processed_nodes_count += masked_out.numel()
+        
+        avg_loss_epoch = total_loss / processed_nodes_count if processed_nodes_count > 0 else float('inf')
+        train_losses.append(avg_loss_epoch)
+        print(f"Epoch {epoch+1}, Avg Loss: {avg_loss_epoch:.4f}")
+
+    # Plotting loss for the current hyperparameter set
+    if current_window_size_for_plot is not None and current_lr_for_plot is not None:
+        plt.clf()
+        plt.title(f"Loss for WS={current_window_size_for_plot}, LR={current_lr_for_plot}")
+        plt.plot([i + 1 for i in range(epochs)], train_losses)
+        plt.xlabel("Epochs")
+        plt.ylabel("Average Loss")
+        plt.savefig(f"loss_ws{current_window_size_for_plot}_lr{current_lr_for_plot}.png")
+        print(f"Saved loss plot to loss_ws{current_window_size_for_plot}_lr{current_lr_for_plot}.png")
+    
+    return train_losses[-1] if train_losses else float('inf')
 
 
-def evaluate_gnn(model, data_list, ticker2id, target_ticker="AAPL"):
+def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
     """
-    Evaluate the GNN model.
-
-    Args:
-        model (nn.Module): The trained GNN model.
-        data_list (list): List of graph data objects.
-        ticker2id (dict): Mapping of tickers to node indices.
-        target_ticker (str): The target ticker for predictions.
+    Evaluate the GNN model on the whole sector.
     """
     model.eval()
-    target_idx = ticker2id[target_ticker]
+    y_true_all, y_pred_all = [], []
+    # id2ticker = {i: ticker for ticker, i in ticker2id.items()} # For detailed per-stock printing if needed
 
-    y_true, y_pred = [], []
-
-    print("\nPredictions for AAPL:")
+    print("\nEvaluating Sector Performance:")
     with torch.no_grad():
-        for data in data_list:
-            out = model(data.x, data.edge_index, data.edge_attr)
-            pred = (out[target_idx] > 0.5).float().item()
-            label = data.y[0].item()
-            y_true.append(label)
-            y_pred.append(pred)
+        for data_idx, data in enumerate(data_list):
+            if data.edge_index.numel() == 0 and data.x.numel() > 0:
+                # print(f"Skipping evaluation for graph at index {data_idx} (timestamp {data.timestamp.item()}) due to no edges.")
+                continue
 
-             # Convert timestamp to YYYY-MM-DD format
-            timestamp = timestamp = data.timestamp.item()
-            prediction_date = pd.to_datetime(timestamp, unit='s').strftime('%Y-%m-%d')
+            out = model(data.x, data.edge_index, data.edge_attr) 
+            
+            mask = data.valid_labels_mask
+            if not mask.any():
+                continue
 
-            # Print the prediction for each day
-            print(f"Date: {prediction_date}, Prediction: {pred:.4f}, Actual: {label}")
+            masked_out = out[mask]
+            masked_labels = data.y[mask]
+            
+            if masked_out.numel() == 0:
+                continue
 
-    correct = sum([1 for yt, yp in zip(y_true, y_pred) if yt == yp])
-    total = len(y_true)
+            pred_for_valid_nodes = (masked_out > 0.5).float()
+            
+            y_true_all.extend(masked_labels.tolist())
+            y_pred_all.extend(pred_for_valid_nodes.tolist())
+
+    if not y_true_all:
+        print("\nNo valid data to evaluate for the sector.")
+        return 0.0 # Return 0 accuracy if no data
+
+    correct = sum([1 for yt, yp in zip(y_true_all, y_pred_all) if yt == yp])
+    total = len(y_true_all)
     accuracy = correct / total if total > 0 else 0
-    print(f"\nAccuracy: {accuracy:.4f} ({correct}/{total})")
-    print("Class Breakdown:")
-    down = sum([1 for yt, yp in zip(y_true, y_pred) if yt == 0 and yp == 0])
-    up = sum([1 for yt, yp in zip(y_true, y_pred) if yt == 1 and yp == 1])
-    print(f"Correct Down: {down}, Correct Up: {up}")
+    print(f"\nOverall Sector Accuracy: {accuracy:.4f} ({correct}/{total})")
+    
+    actual_down = sum([1 for yt in y_true_all if yt == 0])
+    actual_up = sum([1 for yt in y_true_all if yt == 1])
+    pred_down_correct = sum([1 for yt, yp in zip(y_true_all, y_pred_all) if yt == 0 and yp == 0])
+    pred_up_correct = sum([1 for yt, yp in zip(y_true_all, y_pred_all) if yt == 1 and yp == 1])
+
+    print("Class Breakdown (Overall Sector):")
+    print(f"  Correct Down Predictions: {pred_down_correct} (out of {actual_down} actual down instances)")
+    print(f"  Correct Up Predictions: {pred_up_correct} (out of {actual_up} actual up instances)")
+    return accuracy
 
 
 # hyperparameter tuning
+# output_log_file = open("hyperparameter_tuning_log.txt", "w")
+# original_stdout = sys.stdout
+# sys.stdout = output_log_file
 
-# window_sizes = [15, 30, 45, 60, 75, 90]
-# learning_rates = [0.001, 0.01, 0.1]
-# for window_size in window_sizes:
-#     for learning_rate in learning_rates:
-#         print(f"\nRunning with window_size={window_size} and learning_rate={learning_rate}")
-#         df = pd.read_csv("../data/dataset.csv", sep="\t")
-#         data, ticker2id = generate_rolling_temporal_graphs(df, window_size=window_size, target_ticker="AAPL")
-#         # Initialize the model with the correct number of input features
-#         model = AAPL_GNN(in_channels=11, edge_dim=1)  # 11 features incl. sentiment, 1 edge weight
-#         train_gnn(model, data, ticker2id, epochs=100, window_size=window_size, learning_rate=learning_rate)
-# window_size=75 and learning_rate=0.001 minimized loss to 213.9834 for 100 epochs
+df_full = pd.read_csv("../data/dataset.csv", sep="\t")
 
-# window_sizes = [i for i in range(70, 81)]
-# for window_size in window_sizes:
-#     print(f"\nRunning with window_size={window_size}")
-#     df = pd.read_csv("../data/dataset.csv", sep="\t")
-#     data, ticker2id = generate_rolling_temporal_graphs(df, window_size=window_size, target_ticker="AAPL")
-#     # Initialize the model with the correct number of input features
-#     model = AAPL_GNN(in_channels=11, edge_dim=1)  # 11 features incl. sentiment, 1 edge weight
-#     train_gnn(model, data, ticker2id, epochs=100, window_size=window_size, learning_rate=0.001)
-# min loss 224.2325 over 100 epochs for window size = 75 for range(70,81)
+window_sizes_to_tune = [15, 30, 45, 60, 75, 90]
+learning_rates_to_tune = [0.001, 0.0005]
+epochs_for_tuning = 1000 
 
-df = pd.read_csv("../data/dataset.csv", sep="\t")
-data, ticker2id = generate_rolling_temporal_graphs(df, window_size=75, target_ticker="AAPL")
-model = AAPL_GNN(in_channels=11, edge_dim=1)
-train_gnn(model, data, ticker2id, epochs=200, learning_rate=0.001)
-evaluate_gnn(model, data, ticker2id)
+best_accuracy = 0.0
+best_params = {}
+results = []
 
+for ws in window_sizes_to_tune:
+    print(f"\n--- Generating data for window_size={ws} ---")
+    # Generate rolling temporal graphs for the current window size
+    data_graphs, ticker_map = generate_rolling_temporal_graphs(df_full, window_size=ws)
+    
+    if not data_graphs:
+        print(f"No data generated for window_size={ws}. Skipping.")
+        continue
+
+    for lr in learning_rates_to_tune:
+        print(f"\n--- Tuning with window_size={ws}, learning_rate={lr}, epochs={epochs_for_tuning} ---")
+    
+        model_tune = StockPredictGNN(in_channels=11, edge_dim=1) 
+        
+        final_loss = train_gnn(model_tune, data_graphs, ticker_map, epochs=epochs_for_tuning, learning_rate=lr, current_window_size_for_plot=ws, current_lr_for_plot=lr)
+        accuracy_eval = evaluate_gnn(model_tune, data_graphs, ticker_map)
+        
+        results.append({'window_size': ws, 'learning_rate': lr, 'final_loss': final_loss, 'accuracy': accuracy_eval})
+        print(f"Result: WS={ws}, LR={lr}, Final Avg Loss={final_loss:.4f}, Accuracy={accuracy_eval:.4f}")
+
+        if accuracy_eval > best_accuracy:
+            best_accuracy = accuracy_eval
+            best_params = {'window_size': ws, 'learning_rate': lr}
+            print(f"*** New best accuracy: {best_accuracy:.4f} with params: {best_params} ***")
+
+print("\n--- Hyperparameter Tuning Summary ---")
+for res in results:
+    print(f"WS={res['window_size']}, LR={res['learning_rate']}, Final Loss={res['final_loss']:.4f}, Accuracy={res['accuracy']:.4f}")
+
+print(f"\nBest Accuracy: {best_accuracy:.4f}")
+print(f"Best Parameters: {best_params}")
+
+# sys.stdout = original_stdout # Restore standard output
+# output_log_file.close()
+print("\n--- Running with Best Parameters (or default if tuning was skipped/failed) ---")
+
+# Use best_params found, or defaults if tuning didn't yield better ones or was skipped
+final_window_size = best_params.get('window_size', 75) # Default to 75 if no best_params
+final_learning_rate = best_params.get('learning_rate', 0.001) # Default to 0.001
+final_epochs = 100 # Longer training with best params
+
+print(f"Using final parameters: window_size={final_window_size}, learning_rate={final_learning_rate}, epochs={final_epochs}")
+
+data_final, ticker2id_final = generate_rolling_temporal_graphs(df_full, window_size=final_window_size)
+
+if not data_final:
+    print("No data generated for final training run. Exiting.")
+    # sys.exit() # Consider exiting if no data
+else:
+    model_final = StockPredictGNN(in_channels=11, edge_dim=1)
+    print("\n--- Training final model ---")
+    train_gnn(model_final, data_final, ticker2id_final, epochs=final_epochs, learning_rate=final_learning_rate, current_window_size_for_plot=f"final_ws{final_window_size}", current_lr_for_plot=f"final_lr{final_learning_rate}")
+    print("\n--- Evaluating final model ---")
+    evaluate_gnn(model_final, data_final, ticker2id_final)
+
+# Example of plotting overall accuracy vs epochs (requires manual data or more complex logging)
 # plt.clf()
-# plt.title("Accuracy vs Epochs")
-# plt.plot([100,150,175,200,300,500], [0.7029,0.7271,0.7802,0.8164,0.8188,0.8164])
+# plt.title("Accuracy vs Epochs (Example)")
+# plt.plot([10, 20, 30, 40, 50], [0.55, 0.60, 0.62, 0.65, 0.67]) # Placeholder data
 # plt.xlabel("Epochs")
 # plt.ylabel("Accuracy")
-# plt.savefig(f"acc_vs_epochs.png")
+# plt.savefig("final_accuracy_vs_epochs_example.png")
+# print("Saved example accuracy vs epochs plot.")
+
+print("\nHyperparameter tuning script finished.")
