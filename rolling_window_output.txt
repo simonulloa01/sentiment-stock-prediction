@@ -1,0 +1,1006 @@
+         date ticker      open      high       low     close  adj_close    volume  wma_close  sma_close  lag_1_close  lag_7_close  volatility  sentiment  label
+0  2014-01-22   AAPL  0.081688  0.082460  0.082374  0.081994   0.077089  0.154049   0.082355   0.082261     0.081536     0.079504    0.015375   0.515188      1
+1  2014-01-22   MSFT  0.025843  0.025743  0.025731  0.025614   0.023637  0.035511   0.025847   0.025908     0.025929     0.026086    0.007880   0.504783      1
+2  2014-01-22      T  0.022343  0.022258  0.022480  0.022206   0.017408  0.028225   0.022625   0.022946     0.022509     0.022862    0.008465   0.552522      1
+3  2014-01-22   GOOG  0.742792  0.740321  0.747310  0.741804   0.742447  0.005103   0.748467   0.744556     0.740939     0.728130    0.148160   0.504783      0
+4  2014-01-22     FB  0.055567  0.055862  0.054180  0.054003   0.056358  0.099487   0.054481   0.054125     0.055319     0.055264    0.017917   0.473607      0
+Processing graph for current date 2014-03-06, predicting for 2014-03-07
+----------------------------------------------
+Processing graph for current date 2014-03-07, predicting for 2014-03-10
+----------------------------------------------
+Processing graph for current date 2014-03-10, predicting for 2014-03-11
+----------------------------------------------
+Processing graph for current date 2014-03-11, predicting for 2014-03-12
+----------------------------------------------
+Processing graph for current date 2014-03-12, predicting for 2014-03-13
+----------------------------------------------
+Processing graph for current date 2014-03-13, predicting for 2014-03-14
+----------------------------------------------
+Processing graph for current date 2014-03-14, predicting for 2014-03-17
+----------------------------------------------
+Processing graph for current date 2014-03-17, predicting for 2014-03-18
+----------------------------------------------
+Processing graph for current date 2014-03-18, predicting for 2014-03-19
+----------------------------------------------
+Processing graph for current date 2014-03-19, predicting for 2014-03-20
+----------------------------------------------
+Processing graph for current date 2014-03-20, predicting for 2014-03-21
+----------------------------------------------
+Processing graph for current date 2014-03-21, predicting for 2014-03-24
+----------------------------------------------
+Processing graph for current date 2014-03-24, predicting for 2014-03-25
+----------------------------------------------
+Processing graph for current date 2014-03-25, predicting for 2014-03-26
+----------------------------------------------
+Processing graph for current date 2014-03-26, predicting for 2014-03-27
+----------------------------------------------
+Processing graph for current date 2014-03-27, predicting for 2014-03-28
+----------------------------------------------
+Processing graph for current date 2014-03-28, predicting for 2014-03-31
+----------------------------------------------
+Processing graph for current date 2014-03-31, predicting for 2014-04-01
+----------------------------------------------
+Processing graph for current date 2014-04-01, predicting for 2014-04-02
+----------------------------------------------
+Processing graph for current date 2014-04-02, predicting for 2014-04-03
+----------------------------------------------
+Processing graph for current date 2014-04-03, predicting for 2014-04-04
+----------------------------------------------
+Processing graph for current date 2014-04-04, predicting for 2014-04-07
+----------------------------------------------
+Processing graph for current date 2014-04-07, predicting for 2014-04-08
+----------------------------------------------
+Processing graph for current date 2014-04-08, predicting for 2014-04-09
+----------------------------------------------
+Processing graph for current date 2014-04-09, predicting for 2014-04-10
+----------------------------------------------
+Processing graph for current date 2014-04-10, predicting for 2014-04-11
+----------------------------------------------
+Processing graph for current date 2014-04-11, predicting for 2014-04-14
+----------------------------------------------
+Processing graph for current date 2014-04-14, predicting for 2014-04-15
+----------------------------------------------
+Processing graph for current date 2014-04-15, predicting for 2014-04-16
+----------------------------------------------
+Processing graph for current date 2014-04-16, predicting for 2014-04-17
+----------------------------------------------
+Processing graph for current date 2014-04-17, predicting for 2014-04-21
+----------------------------------------------
+Processing graph for current date 2014-04-21, predicting for 2014-04-22
+----------------------------------------------
+Processing graph for current date 2014-04-22, predicting for 2014-04-23
+----------------------------------------------
+Processing graph for current date 2014-04-23, predicting for 2014-04-24
+----------------------------------------------
+Processing graph for current date 2014-04-24, predicting for 2014-04-25
+----------------------------------------------
+Processing graph for current date 2014-04-25, predicting for 2014-04-28
+----------------------------------------------
+Processing graph for current date 2014-04-28, predicting for 2014-04-29
+----------------------------------------------
+Processing graph for current date 2014-04-29, predicting for 2014-04-30
+----------------------------------------------
+Processing graph for current date 2014-04-30, predicting for 2014-05-01
+----------------------------------------------
+Processing graph for current date 2014-05-01, predicting for 2014-05-02
+----------------------------------------------
+Processing graph for current date 2014-05-02, predicting for 2014-05-05
+----------------------------------------------
+Processing graph for current date 2014-05-05, predicting for 2014-05-06
+----------------------------------------------
+Processing graph for current date 2014-05-06, predicting for 2014-05-07
+----------------------------------------------
+Processing graph for current date 2014-05-07, predicting for 2014-05-08
+----------------------------------------------
+Processing graph for current date 2014-05-08, predicting for 2014-05-09
+----------------------------------------------
+Processing graph for current date 2014-05-09, predicting for 2014-05-12
+----------------------------------------------
+Processing graph for current date 2014-05-12, predicting for 2014-05-13
+----------------------------------------------
+Processing graph for current date 2014-05-13, predicting for 2014-05-14
+----------------------------------------------
+Processing graph for current date 2014-05-14, predicting for 2014-05-15
+----------------------------------------------
+Processing graph for current date 2014-05-15, predicting for 2014-05-16
+----------------------------------------------
+Processing graph for current date 2014-05-16, predicting for 2014-05-19
+----------------------------------------------
+Processing graph for current date 2014-05-19, predicting for 2014-05-20
+----------------------------------------------
+Processing graph for current date 2014-05-20, predicting for 2014-05-21
+----------------------------------------------
+Processing graph for current date 2014-05-21, predicting for 2014-05-22
+----------------------------------------------
+Processing graph for current date 2014-05-22, predicting for 2014-05-23
+----------------------------------------------
+Processing graph for current date 2014-05-23, predicting for 2014-05-27
+----------------------------------------------
+Processing graph for current date 2014-05-27, predicting for 2014-05-28
+----------------------------------------------
+Processing graph for current date 2014-05-28, predicting for 2014-05-29
+----------------------------------------------
+Processing graph for current date 2014-05-29, predicting for 2014-05-30
+----------------------------------------------
+Processing graph for current date 2014-05-30, predicting for 2014-06-02
+----------------------------------------------
+Processing graph for current date 2014-06-02, predicting for 2014-06-03
+----------------------------------------------
+Processing graph for current date 2014-06-03, predicting for 2014-06-04
+----------------------------------------------
+Processing graph for current date 2014-06-04, predicting for 2014-06-05
+----------------------------------------------
+Processing graph for current date 2014-06-05, predicting for 2014-06-06
+----------------------------------------------
+Processing graph for current date 2014-06-06, predicting for 2014-06-09
+----------------------------------------------
+Processing graph for current date 2014-06-09, predicting for 2014-06-10
+----------------------------------------------
+Processing graph for current date 2014-06-10, predicting for 2014-06-11
+----------------------------------------------
+Processing graph for current date 2014-06-11, predicting for 2014-06-12
+----------------------------------------------
+Processing graph for current date 2014-06-12, predicting for 2014-06-13
+----------------------------------------------
+Processing graph for current date 2014-06-13, predicting for 2014-06-16
+----------------------------------------------
+Processing graph for current date 2014-06-16, predicting for 2014-06-17
+----------------------------------------------
+Processing graph for current date 2014-06-17, predicting for 2014-06-18
+----------------------------------------------
+Processing graph for current date 2014-06-18, predicting for 2014-06-19
+----------------------------------------------
+Processing graph for current date 2014-06-19, predicting for 2014-06-20
+----------------------------------------------
+Processing graph for current date 2014-06-20, predicting for 2014-06-23
+----------------------------------------------
+Processing graph for current date 2014-06-23, predicting for 2014-06-24
+----------------------------------------------
+Processing graph for current date 2014-06-24, predicting for 2014-06-25
+----------------------------------------------
+Processing graph for current date 2014-06-25, predicting for 2014-06-26
+----------------------------------------------
+Processing graph for current date 2014-06-26, predicting for 2014-06-27
+----------------------------------------------
+Processing graph for current date 2014-06-27, predicting for 2014-06-30
+----------------------------------------------
+Processing graph for current date 2014-06-30, predicting for 2014-07-01
+----------------------------------------------
+Processing graph for current date 2014-07-01, predicting for 2014-07-02
+----------------------------------------------
+Processing graph for current date 2014-07-02, predicting for 2014-07-03
+----------------------------------------------
+Processing graph for current date 2014-07-03, predicting for 2014-07-07
+----------------------------------------------
+Processing graph for current date 2014-07-07, predicting for 2014-07-08
+----------------------------------------------
+Processing graph for current date 2014-07-08, predicting for 2014-07-09
+----------------------------------------------
+Processing graph for current date 2014-07-09, predicting for 2014-07-10
+----------------------------------------------
+Processing graph for current date 2014-07-10, predicting for 2014-07-11
+----------------------------------------------
+Processing graph for current date 2014-07-11, predicting for 2014-07-14
+----------------------------------------------
+Processing graph for current date 2014-07-14, predicting for 2014-07-15
+----------------------------------------------
+Processing graph for current date 2014-07-15, predicting for 2014-07-16
+----------------------------------------------
+Processing graph for current date 2014-07-16, predicting for 2014-07-17
+----------------------------------------------
+Processing graph for current date 2014-07-17, predicting for 2014-07-18
+----------------------------------------------
+Processing graph for current date 2014-07-18, predicting for 2014-07-21
+----------------------------------------------
+Processing graph for current date 2014-07-21, predicting for 2014-07-22
+----------------------------------------------
+Processing graph for current date 2014-07-22, predicting for 2014-07-23
+----------------------------------------------
+Processing graph for current date 2014-07-23, predicting for 2014-07-24
+----------------------------------------------
+Processing graph for current date 2014-07-24, predicting for 2014-07-25
+----------------------------------------------
+Processing graph for current date 2014-07-25, predicting for 2014-07-28
+----------------------------------------------
+Processing graph for current date 2014-07-28, predicting for 2014-07-29
+----------------------------------------------
+Processing graph for current date 2014-07-29, predicting for 2014-07-30
+----------------------------------------------
+Processing graph for current date 2014-07-30, predicting for 2014-07-31
+----------------------------------------------
+Processing graph for current date 2014-07-31, predicting for 2014-08-01
+----------------------------------------------
+Processing graph for current date 2014-08-01, predicting for 2014-08-04
+----------------------------------------------
+Processing graph for current date 2014-08-04, predicting for 2014-08-05
+----------------------------------------------
+Processing graph for current date 2014-08-05, predicting for 2014-08-06
+----------------------------------------------
+Processing graph for current date 2014-08-06, predicting for 2014-08-07
+----------------------------------------------
+Processing graph for current date 2014-08-07, predicting for 2014-08-08
+----------------------------------------------
+Processing graph for current date 2014-08-08, predicting for 2014-08-11
+----------------------------------------------
+Processing graph for current date 2014-08-11, predicting for 2014-08-12
+----------------------------------------------
+Processing graph for current date 2014-08-12, predicting for 2014-08-13
+----------------------------------------------
+Processing graph for current date 2014-08-13, predicting for 2014-08-14
+----------------------------------------------
+Processing graph for current date 2014-08-14, predicting for 2014-08-15
+----------------------------------------------
+Processing graph for current date 2014-08-15, predicting for 2014-08-18
+----------------------------------------------
+Processing graph for current date 2014-08-18, predicting for 2014-08-19
+----------------------------------------------
+Processing graph for current date 2014-08-19, predicting for 2014-08-20
+----------------------------------------------
+Processing graph for current date 2014-08-20, predicting for 2014-08-21
+----------------------------------------------
+Processing graph for current date 2014-08-21, predicting for 2014-08-22
+----------------------------------------------
+Processing graph for current date 2014-08-22, predicting for 2014-08-25
+----------------------------------------------
+Processing graph for current date 2014-08-25, predicting for 2014-08-26
+----------------------------------------------
+Processing graph for current date 2014-08-26, predicting for 2014-08-27
+----------------------------------------------
+Processing graph for current date 2014-08-27, predicting for 2014-08-28
+----------------------------------------------
+Processing graph for current date 2014-08-28, predicting for 2014-08-29
+----------------------------------------------
+Processing graph for current date 2014-08-29, predicting for 2014-09-02
+----------------------------------------------
+Processing graph for current date 2014-09-02, predicting for 2014-09-03
+----------------------------------------------
+Processing graph for current date 2014-09-03, predicting for 2014-09-04
+----------------------------------------------
+Processing graph for current date 2014-09-04, predicting for 2014-09-05
+----------------------------------------------
+Processing graph for current date 2014-09-05, predicting for 2014-09-08
+----------------------------------------------
+Processing graph for current date 2014-09-08, predicting for 2014-09-09
+----------------------------------------------
+Processing graph for current date 2014-09-09, predicting for 2014-09-10
+----------------------------------------------
+Processing graph for current date 2014-09-10, predicting for 2014-09-11
+----------------------------------------------
+Processing graph for current date 2014-09-11, predicting for 2014-09-12
+----------------------------------------------
+Processing graph for current date 2014-09-12, predicting for 2014-09-15
+----------------------------------------------
+Processing graph for current date 2014-09-15, predicting for 2014-09-16
+----------------------------------------------
+Processing graph for current date 2014-09-16, predicting for 2014-09-17
+----------------------------------------------
+Processing graph for current date 2014-09-17, predicting for 2014-09-18
+----------------------------------------------
+Processing graph for current date 2014-09-18, predicting for 2014-09-19
+----------------------------------------------
+Processing graph for current date 2014-09-19, predicting for 2014-09-22
+----------------------------------------------
+Processing graph for current date 2014-09-22, predicting for 2014-09-23
+----------------------------------------------
+Processing graph for current date 2014-09-23, predicting for 2014-09-24
+----------------------------------------------
+Processing graph for current date 2014-09-24, predicting for 2014-09-25
+----------------------------------------------
+Processing graph for current date 2014-09-25, predicting for 2014-09-26
+----------------------------------------------
+Processing graph for current date 2014-09-26, predicting for 2014-09-29
+----------------------------------------------
+Processing graph for current date 2014-09-29, predicting for 2014-09-30
+----------------------------------------------
+Processing graph for current date 2014-09-30, predicting for 2014-10-01
+----------------------------------------------
+Processing graph for current date 2014-10-01, predicting for 2014-10-02
+----------------------------------------------
+Processing graph for current date 2014-10-02, predicting for 2014-10-03
+----------------------------------------------
+Processing graph for current date 2014-10-03, predicting for 2014-10-06
+----------------------------------------------
+Processing graph for current date 2014-10-06, predicting for 2014-10-07
+----------------------------------------------
+Processing graph for current date 2014-10-07, predicting for 2014-10-08
+----------------------------------------------
+Processing graph for current date 2014-10-08, predicting for 2014-10-09
+----------------------------------------------
+Processing graph for current date 2014-10-09, predicting for 2014-10-10
+----------------------------------------------
+Processing graph for current date 2014-10-10, predicting for 2014-10-13
+----------------------------------------------
+Processing graph for current date 2014-10-13, predicting for 2014-10-14
+----------------------------------------------
+Processing graph for current date 2014-10-14, predicting for 2014-10-15
+----------------------------------------------
+Processing graph for current date 2014-10-15, predicting for 2014-10-16
+----------------------------------------------
+Processing graph for current date 2014-10-16, predicting for 2014-10-17
+----------------------------------------------
+Processing graph for current date 2014-10-17, predicting for 2014-10-20
+----------------------------------------------
+Processing graph for current date 2014-10-20, predicting for 2014-10-21
+----------------------------------------------
+Processing graph for current date 2014-10-21, predicting for 2014-10-22
+----------------------------------------------
+Processing graph for current date 2014-10-22, predicting for 2014-10-23
+----------------------------------------------
+Processing graph for current date 2014-10-23, predicting for 2014-10-24
+----------------------------------------------
+Processing graph for current date 2014-10-24, predicting for 2014-10-27
+----------------------------------------------
+Processing graph for current date 2014-10-27, predicting for 2014-10-28
+----------------------------------------------
+Processing graph for current date 2014-10-28, predicting for 2014-10-29
+----------------------------------------------
+Processing graph for current date 2014-10-29, predicting for 2014-10-30
+----------------------------------------------
+Processing graph for current date 2014-10-30, predicting for 2014-10-31
+----------------------------------------------
+Processing graph for current date 2014-10-31, predicting for 2014-11-03
+----------------------------------------------
+Processing graph for current date 2014-11-03, predicting for 2014-11-04
+----------------------------------------------
+Processing graph for current date 2014-11-04, predicting for 2014-11-05
+----------------------------------------------
+Processing graph for current date 2014-11-05, predicting for 2014-11-06
+----------------------------------------------
+Processing graph for current date 2014-11-06, predicting for 2014-11-07
+----------------------------------------------
+Processing graph for current date 2014-11-07, predicting for 2014-11-10
+----------------------------------------------
+Processing graph for current date 2014-11-10, predicting for 2014-11-11
+----------------------------------------------
+Processing graph for current date 2014-11-11, predicting for 2014-11-12
+----------------------------------------------
+Processing graph for current date 2014-11-12, predicting for 2014-11-13
+----------------------------------------------
+Processing graph for current date 2014-11-13, predicting for 2014-11-14
+----------------------------------------------
+Processing graph for current date 2014-11-14, predicting for 2014-11-17
+----------------------------------------------
+Processing graph for current date 2014-11-17, predicting for 2014-11-18
+----------------------------------------------
+Processing graph for current date 2014-11-18, predicting for 2014-11-19
+----------------------------------------------
+Processing graph for current date 2014-11-19, predicting for 2014-11-20
+----------------------------------------------
+Processing graph for current date 2014-11-20, predicting for 2014-11-21
+----------------------------------------------
+Processing graph for current date 2014-11-21, predicting for 2014-11-24
+----------------------------------------------
+Processing graph for current date 2014-11-24, predicting for 2014-11-25
+----------------------------------------------
+Processing graph for current date 2014-11-25, predicting for 2014-11-26
+----------------------------------------------
+Processing graph for current date 2014-11-26, predicting for 2014-11-28
+----------------------------------------------
+Processing graph for current date 2014-11-28, predicting for 2014-12-01
+----------------------------------------------
+Processing graph for current date 2014-12-01, predicting for 2014-12-02
+----------------------------------------------
+Processing graph for current date 2014-12-02, predicting for 2014-12-03
+----------------------------------------------
+Processing graph for current date 2014-12-03, predicting for 2014-12-04
+----------------------------------------------
+Processing graph for current date 2014-12-04, predicting for 2014-12-05
+----------------------------------------------
+Processing graph for current date 2014-12-05, predicting for 2014-12-08
+----------------------------------------------
+Processing graph for current date 2014-12-08, predicting for 2014-12-09
+----------------------------------------------
+Processing graph for current date 2014-12-09, predicting for 2014-12-10
+----------------------------------------------
+Processing graph for current date 2014-12-10, predicting for 2014-12-11
+----------------------------------------------
+Processing graph for current date 2014-12-11, predicting for 2014-12-12
+----------------------------------------------
+Processing graph for current date 2014-12-12, predicting for 2014-12-15
+----------------------------------------------
+Processing graph for current date 2014-12-15, predicting for 2014-12-16
+----------------------------------------------
+Processing graph for current date 2014-12-16, predicting for 2014-12-17
+----------------------------------------------
+Processing graph for current date 2014-12-17, predicting for 2014-12-18
+----------------------------------------------
+Processing graph for current date 2014-12-18, predicting for 2014-12-19
+----------------------------------------------
+Processing graph for current date 2014-12-19, predicting for 2014-12-22
+----------------------------------------------
+Processing graph for current date 2014-12-22, predicting for 2014-12-23
+----------------------------------------------
+Processing graph for current date 2014-12-23, predicting for 2014-12-24
+----------------------------------------------
+Processing graph for current date 2014-12-24, predicting for 2014-12-26
+----------------------------------------------
+Processing graph for current date 2014-12-26, predicting for 2014-12-29
+----------------------------------------------
+Processing graph for current date 2014-12-29, predicting for 2014-12-30
+----------------------------------------------
+Processing graph for current date 2014-12-30, predicting for 2014-12-31
+----------------------------------------------
+Processing graph for current date 2014-12-31, predicting for 2015-01-02
+----------------------------------------------
+Processing graph for current date 2015-01-02, predicting for 2015-01-05
+----------------------------------------------
+Processing graph for current date 2015-01-05, predicting for 2015-01-06
+----------------------------------------------
+Processing graph for current date 2015-01-06, predicting for 2015-01-07
+----------------------------------------------
+Processing graph for current date 2015-01-07, predicting for 2015-01-08
+----------------------------------------------
+Processing graph for current date 2015-01-08, predicting for 2015-01-09
+----------------------------------------------
+Processing graph for current date 2015-01-09, predicting for 2015-01-12
+----------------------------------------------
+Processing graph for current date 2015-01-12, predicting for 2015-01-13
+----------------------------------------------
+Processing graph for current date 2015-01-13, predicting for 2015-01-14
+----------------------------------------------
+Processing graph for current date 2015-01-14, predicting for 2015-01-15
+----------------------------------------------
+Processing graph for current date 2015-01-15, predicting for 2015-01-16
+----------------------------------------------
+Processing graph for current date 2015-01-16, predicting for 2015-01-20
+----------------------------------------------
+Processing graph for current date 2015-01-20, predicting for 2015-01-21
+----------------------------------------------
+Processing graph for current date 2015-01-21, predicting for 2015-01-22
+----------------------------------------------
+Processing graph for current date 2015-01-22, predicting for 2015-01-23
+----------------------------------------------
+Processing graph for current date 2015-01-23, predicting for 2015-01-26
+----------------------------------------------
+Processing graph for current date 2015-01-26, predicting for 2015-01-27
+----------------------------------------------
+Processing graph for current date 2015-01-27, predicting for 2015-01-28
+----------------------------------------------
+Processing graph for current date 2015-01-28, predicting for 2015-01-29
+----------------------------------------------
+Processing graph for current date 2015-01-29, predicting for 2015-01-30
+----------------------------------------------
+Processing graph for current date 2015-01-30, predicting for 2015-02-02
+----------------------------------------------
+Processing graph for current date 2015-02-02, predicting for 2015-02-03
+----------------------------------------------
+Processing graph for current date 2015-02-03, predicting for 2015-02-04
+----------------------------------------------
+Processing graph for current date 2015-02-04, predicting for 2015-02-05
+----------------------------------------------
+Processing graph for current date 2015-02-05, predicting for 2015-02-06
+----------------------------------------------
+Processing graph for current date 2015-02-06, predicting for 2015-02-09
+----------------------------------------------
+Processing graph for current date 2015-02-09, predicting for 2015-02-10
+----------------------------------------------
+Processing graph for current date 2015-02-10, predicting for 2015-02-11
+----------------------------------------------
+Processing graph for current date 2015-02-11, predicting for 2015-02-12
+----------------------------------------------
+Processing graph for current date 2015-02-12, predicting for 2015-02-13
+----------------------------------------------
+Processing graph for current date 2015-02-13, predicting for 2015-02-17
+----------------------------------------------
+Processing graph for current date 2015-02-17, predicting for 2015-02-18
+----------------------------------------------
+Processing graph for current date 2015-02-18, predicting for 2015-02-19
+----------------------------------------------
+Processing graph for current date 2015-02-19, predicting for 2015-02-20
+----------------------------------------------
+Processing graph for current date 2015-02-20, predicting for 2015-02-23
+----------------------------------------------
+Processing graph for current date 2015-02-23, predicting for 2015-02-24
+----------------------------------------------
+Processing graph for current date 2015-02-24, predicting for 2015-02-25
+----------------------------------------------
+Processing graph for current date 2015-02-25, predicting for 2015-02-26
+----------------------------------------------
+Processing graph for current date 2015-02-26, predicting for 2015-02-27
+----------------------------------------------
+Processing graph for current date 2015-02-27, predicting for 2015-03-02
+----------------------------------------------
+Processing graph for current date 2015-03-02, predicting for 2015-03-03
+----------------------------------------------
+Processing graph for current date 2015-03-03, predicting for 2015-03-04
+----------------------------------------------
+Processing graph for current date 2015-03-04, predicting for 2015-03-05
+----------------------------------------------
+Processing graph for current date 2015-03-05, predicting for 2015-03-06
+----------------------------------------------
+Processing graph for current date 2015-03-06, predicting for 2015-03-09
+----------------------------------------------
+Processing graph for current date 2015-03-09, predicting for 2015-03-10
+----------------------------------------------
+Processing graph for current date 2015-03-10, predicting for 2015-03-11
+----------------------------------------------
+Processing graph for current date 2015-03-11, predicting for 2015-03-12
+----------------------------------------------
+Processing graph for current date 2015-03-12, predicting for 2015-03-13
+----------------------------------------------
+Processing graph for current date 2015-03-13, predicting for 2015-03-16
+----------------------------------------------
+Processing graph for current date 2015-03-16, predicting for 2015-03-17
+----------------------------------------------
+Processing graph for current date 2015-03-17, predicting for 2015-03-18
+----------------------------------------------
+Processing graph for current date 2015-03-18, predicting for 2015-03-19
+----------------------------------------------
+Processing graph for current date 2015-03-19, predicting for 2015-03-20
+----------------------------------------------
+Processing graph for current date 2015-03-20, predicting for 2015-03-23
+----------------------------------------------
+Processing graph for current date 2015-03-23, predicting for 2015-03-24
+----------------------------------------------
+Processing graph for current date 2015-03-24, predicting for 2015-03-25
+----------------------------------------------
+Processing graph for current date 2015-03-25, predicting for 2015-03-26
+----------------------------------------------
+Processing graph for current date 2015-03-26, predicting for 2015-03-27
+----------------------------------------------
+Processing graph for current date 2015-03-27, predicting for 2015-03-30
+----------------------------------------------
+Processing graph for current date 2015-03-30, predicting for 2015-03-31
+----------------------------------------------
+Processing graph for current date 2015-03-31, predicting for 2015-04-01
+----------------------------------------------
+Processing graph for current date 2015-04-01, predicting for 2015-04-02
+----------------------------------------------
+Processing graph for current date 2015-04-02, predicting for 2015-04-06
+----------------------------------------------
+Processing graph for current date 2015-04-06, predicting for 2015-04-07
+----------------------------------------------
+Processing graph for current date 2015-04-07, predicting for 2015-04-08
+----------------------------------------------
+Processing graph for current date 2015-04-08, predicting for 2015-04-09
+----------------------------------------------
+Processing graph for current date 2015-04-09, predicting for 2015-04-10
+----------------------------------------------
+Processing graph for current date 2015-04-10, predicting for 2015-04-13
+----------------------------------------------
+Processing graph for current date 2015-04-13, predicting for 2015-04-14
+----------------------------------------------
+Processing graph for current date 2015-04-14, predicting for 2015-04-15
+----------------------------------------------
+Processing graph for current date 2015-04-15, predicting for 2015-04-16
+----------------------------------------------
+Processing graph for current date 2015-04-16, predicting for 2015-04-17
+----------------------------------------------
+Processing graph for current date 2015-04-17, predicting for 2015-04-20
+----------------------------------------------
+Processing graph for current date 2015-04-20, predicting for 2015-04-21
+----------------------------------------------
+Processing graph for current date 2015-04-21, predicting for 2015-04-22
+----------------------------------------------
+Processing graph for current date 2015-04-22, predicting for 2015-04-23
+----------------------------------------------
+Processing graph for current date 2015-04-23, predicting for 2015-04-24
+----------------------------------------------
+Processing graph for current date 2015-04-24, predicting for 2015-04-27
+----------------------------------------------
+Processing graph for current date 2015-04-27, predicting for 2015-04-28
+----------------------------------------------
+Processing graph for current date 2015-04-28, predicting for 2015-04-29
+----------------------------------------------
+Processing graph for current date 2015-04-29, predicting for 2015-04-30
+----------------------------------------------
+Processing graph for current date 2015-04-30, predicting for 2015-05-01
+----------------------------------------------
+Processing graph for current date 2015-05-01, predicting for 2015-05-04
+----------------------------------------------
+Processing graph for current date 2015-05-04, predicting for 2015-05-05
+----------------------------------------------
+Processing graph for current date 2015-05-05, predicting for 2015-05-06
+----------------------------------------------
+Processing graph for current date 2015-05-06, predicting for 2015-05-07
+----------------------------------------------
+Processing graph for current date 2015-05-07, predicting for 2015-05-08
+----------------------------------------------
+Processing graph for current date 2015-05-08, predicting for 2015-05-11
+----------------------------------------------
+Processing graph for current date 2015-05-11, predicting for 2015-05-12
+----------------------------------------------
+Processing graph for current date 2015-05-12, predicting for 2015-05-13
+----------------------------------------------
+Processing graph for current date 2015-05-13, predicting for 2015-05-14
+----------------------------------------------
+Processing graph for current date 2015-05-14, predicting for 2015-05-15
+----------------------------------------------
+Processing graph for current date 2015-05-15, predicting for 2015-05-18
+----------------------------------------------
+Processing graph for current date 2015-05-18, predicting for 2015-05-19
+----------------------------------------------
+Processing graph for current date 2015-05-19, predicting for 2015-05-20
+----------------------------------------------
+Processing graph for current date 2015-05-20, predicting for 2015-05-21
+----------------------------------------------
+Processing graph for current date 2015-05-21, predicting for 2015-05-22
+----------------------------------------------
+Processing graph for current date 2015-05-22, predicting for 2015-05-26
+----------------------------------------------
+Processing graph for current date 2015-05-26, predicting for 2015-05-27
+----------------------------------------------
+Processing graph for current date 2015-05-27, predicting for 2015-05-28
+----------------------------------------------
+Processing graph for current date 2015-05-28, predicting for 2015-05-29
+----------------------------------------------
+Processing graph for current date 2015-05-29, predicting for 2015-06-01
+----------------------------------------------
+Processing graph for current date 2015-06-01, predicting for 2015-06-02
+----------------------------------------------
+Processing graph for current date 2015-06-02, predicting for 2015-06-03
+----------------------------------------------
+Processing graph for current date 2015-06-03, predicting for 2015-06-04
+----------------------------------------------
+Processing graph for current date 2015-06-04, predicting for 2015-06-05
+----------------------------------------------
+Processing graph for current date 2015-06-05, predicting for 2015-06-08
+----------------------------------------------
+Processing graph for current date 2015-06-08, predicting for 2015-06-09
+----------------------------------------------
+Processing graph for current date 2015-06-09, predicting for 2015-06-10
+----------------------------------------------
+Processing graph for current date 2015-06-10, predicting for 2015-06-11
+----------------------------------------------
+Processing graph for current date 2015-06-11, predicting for 2015-06-12
+----------------------------------------------
+Processing graph for current date 2015-06-12, predicting for 2015-06-15
+----------------------------------------------
+Processing graph for current date 2015-06-15, predicting for 2015-06-16
+----------------------------------------------
+Processing graph for current date 2015-06-16, predicting for 2015-06-17
+----------------------------------------------
+Processing graph for current date 2015-06-17, predicting for 2015-06-18
+----------------------------------------------
+Processing graph for current date 2015-06-18, predicting for 2015-06-19
+----------------------------------------------
+Processing graph for current date 2015-06-19, predicting for 2015-06-22
+----------------------------------------------
+Processing graph for current date 2015-06-22, predicting for 2015-06-23
+----------------------------------------------
+Processing graph for current date 2015-06-23, predicting for 2015-06-24
+----------------------------------------------
+Processing graph for current date 2015-06-24, predicting for 2015-06-25
+----------------------------------------------
+Processing graph for current date 2015-06-25, predicting for 2015-06-26
+----------------------------------------------
+Processing graph for current date 2015-06-26, predicting for 2015-06-29
+----------------------------------------------
+Processing graph for current date 2015-06-29, predicting for 2015-06-30
+----------------------------------------------
+Processing graph for current date 2015-06-30, predicting for 2015-07-01
+----------------------------------------------
+Processing graph for current date 2015-07-01, predicting for 2015-07-02
+----------------------------------------------
+Processing graph for current date 2015-07-02, predicting for 2015-07-06
+----------------------------------------------
+Processing graph for current date 2015-07-06, predicting for 2015-07-07
+----------------------------------------------
+Processing graph for current date 2015-07-07, predicting for 2015-07-08
+----------------------------------------------
+Processing graph for current date 2015-07-08, predicting for 2015-07-09
+----------------------------------------------
+Processing graph for current date 2015-07-09, predicting for 2015-07-10
+----------------------------------------------
+Processing graph for current date 2015-07-10, predicting for 2015-07-13
+----------------------------------------------
+Processing graph for current date 2015-07-13, predicting for 2015-07-14
+----------------------------------------------
+Processing graph for current date 2015-07-14, predicting for 2015-07-15
+----------------------------------------------
+Processing graph for current date 2015-07-15, predicting for 2015-07-16
+----------------------------------------------
+Processing graph for current date 2015-07-16, predicting for 2015-07-17
+----------------------------------------------
+Processing graph for current date 2015-07-17, predicting for 2015-07-20
+----------------------------------------------
+Processing graph for current date 2015-07-20, predicting for 2015-07-21
+----------------------------------------------
+Processing graph for current date 2015-07-21, predicting for 2015-07-22
+----------------------------------------------
+Processing graph for current date 2015-07-22, predicting for 2015-07-23
+----------------------------------------------
+Processing graph for current date 2015-07-23, predicting for 2015-07-24
+----------------------------------------------
+Processing graph for current date 2015-07-24, predicting for 2015-07-27
+----------------------------------------------
+Processing graph for current date 2015-07-27, predicting for 2015-07-28
+----------------------------------------------
+Processing graph for current date 2015-07-28, predicting for 2015-07-29
+----------------------------------------------
+Processing graph for current date 2015-07-29, predicting for 2015-07-30
+----------------------------------------------
+Processing graph for current date 2015-07-30, predicting for 2015-07-31
+----------------------------------------------
+Processing graph for current date 2015-07-31, predicting for 2015-08-03
+----------------------------------------------
+Processing graph for current date 2015-08-03, predicting for 2015-08-04
+----------------------------------------------
+Processing graph for current date 2015-08-04, predicting for 2015-08-05
+----------------------------------------------
+Processing graph for current date 2015-08-05, predicting for 2015-08-06
+----------------------------------------------
+Processing graph for current date 2015-08-06, predicting for 2015-08-07
+----------------------------------------------
+Processing graph for current date 2015-08-07, predicting for 2015-08-10
+----------------------------------------------
+Processing graph for current date 2015-08-10, predicting for 2015-08-11
+----------------------------------------------
+Processing graph for current date 2015-08-11, predicting for 2015-08-12
+----------------------------------------------
+Processing graph for current date 2015-08-12, predicting for 2015-08-13
+----------------------------------------------
+Processing graph for current date 2015-08-13, predicting for 2015-08-14
+----------------------------------------------
+Processing graph for current date 2015-08-14, predicting for 2015-08-17
+----------------------------------------------
+Processing graph for current date 2015-08-17, predicting for 2015-08-18
+----------------------------------------------
+Processing graph for current date 2015-08-18, predicting for 2015-08-19
+----------------------------------------------
+Processing graph for current date 2015-08-19, predicting for 2015-08-20
+----------------------------------------------
+Processing graph for current date 2015-08-20, predicting for 2015-08-21
+----------------------------------------------
+Processing graph for current date 2015-08-21, predicting for 2015-08-24
+----------------------------------------------
+Processing graph for current date 2015-08-24, predicting for 2015-08-25
+----------------------------------------------
+Processing graph for current date 2015-08-25, predicting for 2015-08-26
+----------------------------------------------
+Processing graph for current date 2015-08-26, predicting for 2015-08-27
+----------------------------------------------
+Processing graph for current date 2015-08-27, predicting for 2015-08-28
+----------------------------------------------
+Processing graph for current date 2015-08-28, predicting for 2015-08-31
+----------------------------------------------
+Processing graph for current date 2015-08-31, predicting for 2015-09-01
+----------------------------------------------
+Processing graph for current date 2015-09-01, predicting for 2015-09-02
+----------------------------------------------
+Processing graph for current date 2015-09-02, predicting for 2015-09-03
+----------------------------------------------
+Processing graph for current date 2015-09-03, predicting for 2015-09-04
+----------------------------------------------
+Processing graph for current date 2015-09-04, predicting for 2015-09-08
+----------------------------------------------
+Processing graph for current date 2015-09-08, predicting for 2015-09-09
+----------------------------------------------
+Processing graph for current date 2015-09-09, predicting for 2015-09-10
+----------------------------------------------
+Processing graph for current date 2015-09-10, predicting for 2015-09-11
+----------------------------------------------
+Processing graph for current date 2015-09-11, predicting for 2015-09-14
+----------------------------------------------
+Processing graph for current date 2015-09-14, predicting for 2015-09-15
+----------------------------------------------
+Processing graph for current date 2015-09-15, predicting for 2015-09-16
+----------------------------------------------
+Processing graph for current date 2015-09-16, predicting for 2015-09-17
+----------------------------------------------
+Processing graph for current date 2015-09-17, predicting for 2015-09-18
+----------------------------------------------
+Processing graph for current date 2015-09-18, predicting for 2015-09-21
+----------------------------------------------
+Processing graph for current date 2015-09-21, predicting for 2015-09-22
+----------------------------------------------
+Processing graph for current date 2015-09-22, predicting for 2015-09-23
+----------------------------------------------
+Processing graph for current date 2015-09-23, predicting for 2015-09-24
+----------------------------------------------
+Processing graph for current date 2015-09-24, predicting for 2015-09-25
+----------------------------------------------
+Processing graph for current date 2015-09-25, predicting for 2015-09-28
+----------------------------------------------
+Processing graph for current date 2015-09-28, predicting for 2015-09-29
+----------------------------------------------
+Processing graph for current date 2015-09-29, predicting for 2015-09-30
+----------------------------------------------
+Processing graph for current date 2015-09-30, predicting for 2015-10-01
+----------------------------------------------
+Processing graph for current date 2015-10-01, predicting for 2015-10-02
+----------------------------------------------
+Processing graph for current date 2015-10-02, predicting for 2015-10-05
+----------------------------------------------
+Processing graph for current date 2015-10-05, predicting for 2015-10-06
+----------------------------------------------
+Processing graph for current date 2015-10-06, predicting for 2015-10-07
+----------------------------------------------
+Processing graph for current date 2015-10-07, predicting for 2015-10-08
+----------------------------------------------
+Processing graph for current date 2015-10-08, predicting for 2015-10-09
+----------------------------------------------
+Processing graph for current date 2015-10-09, predicting for 2015-10-12
+----------------------------------------------
+Processing graph for current date 2015-10-12, predicting for 2015-10-13
+----------------------------------------------
+Processing graph for current date 2015-10-13, predicting for 2015-10-14
+----------------------------------------------
+Processing graph for current date 2015-10-14, predicting for 2015-10-15
+----------------------------------------------
+Processing graph for current date 2015-10-15, predicting for 2015-10-16
+----------------------------------------------
+Processing graph for current date 2015-10-16, predicting for 2015-10-19
+----------------------------------------------
+Processing graph for current date 2015-10-19, predicting for 2015-10-20
+----------------------------------------------
+Processing graph for current date 2015-10-20, predicting for 2015-10-21
+----------------------------------------------
+Processing graph for current date 2015-10-21, predicting for 2015-10-22
+----------------------------------------------
+Processing graph for current date 2015-10-22, predicting for 2015-10-23
+----------------------------------------------
+Processing graph for current date 2015-10-23, predicting for 2015-10-26
+----------------------------------------------
+Processing graph for current date 2015-10-26, predicting for 2015-10-27
+----------------------------------------------
+Processing graph for current date 2015-10-27, predicting for 2015-10-28
+----------------------------------------------
+Processing graph for current date 2015-10-28, predicting for 2015-10-29
+----------------------------------------------
+Processing graph for current date 2015-10-29, predicting for 2015-10-30
+----------------------------------------------
+Processing graph for current date 2015-10-30, predicting for 2015-11-02
+----------------------------------------------
+Processing graph for current date 2015-11-02, predicting for 2015-11-03
+----------------------------------------------
+Processing graph for current date 2015-11-03, predicting for 2015-11-04
+----------------------------------------------
+Processing graph for current date 2015-11-04, predicting for 2015-11-05
+----------------------------------------------
+Processing graph for current date 2015-11-05, predicting for 2015-11-06
+----------------------------------------------
+Processing graph for current date 2015-11-06, predicting for 2015-11-09
+----------------------------------------------
+Processing graph for current date 2015-11-09, predicting for 2015-11-10
+----------------------------------------------
+Processing graph for current date 2015-11-10, predicting for 2015-11-11
+----------------------------------------------
+Processing graph for current date 2015-11-11, predicting for 2015-11-12
+----------------------------------------------
+Processing graph for current date 2015-11-12, predicting for 2015-11-13
+----------------------------------------------
+Processing graph for current date 2015-11-13, predicting for 2015-11-16
+----------------------------------------------
+Processing graph for current date 2015-11-16, predicting for 2015-11-17
+----------------------------------------------
+Processing graph for current date 2015-11-17, predicting for 2015-11-18
+----------------------------------------------
+Processing graph for current date 2015-11-18, predicting for 2015-11-19
+----------------------------------------------
+Processing graph for current date 2015-11-19, predicting for 2015-11-20
+----------------------------------------------
+Processing graph for current date 2015-11-20, predicting for 2015-11-23
+----------------------------------------------
+Processing graph for current date 2015-11-23, predicting for 2015-11-24
+----------------------------------------------
+Processing graph for current date 2015-11-24, predicting for 2015-11-25
+----------------------------------------------
+Processing graph for current date 2015-11-25, predicting for 2015-11-27
+----------------------------------------------
+Processing graph for current date 2015-11-27, predicting for 2015-11-30
+----------------------------------------------
+Processing graph for current date 2015-11-30, predicting for 2015-12-01
+----------------------------------------------
+Processing graph for current date 2015-12-01, predicting for 2015-12-02
+----------------------------------------------
+Processing graph for current date 2015-12-02, predicting for 2015-12-03
+----------------------------------------------
+Processing graph for current date 2015-12-03, predicting for 2015-12-04
+----------------------------------------------
+Processing graph for current date 2015-12-04, predicting for 2015-12-07
+----------------------------------------------
+Processing graph for current date 2015-12-07, predicting for 2015-12-08
+----------------------------------------------
+Processing graph for current date 2015-12-08, predicting for 2015-12-09
+----------------------------------------------
+Processing graph for current date 2015-12-09, predicting for 2015-12-10
+----------------------------------------------
+Processing graph for current date 2015-12-10, predicting for 2015-12-11
+----------------------------------------------
+Processing graph for current date 2015-12-11, predicting for 2015-12-14
+----------------------------------------------
+Processing graph for current date 2015-12-14, predicting for 2015-12-15
+----------------------------------------------
+Processing graph for current date 2015-12-15, predicting for 2015-12-16
+----------------------------------------------
+Processing graph for current date 2015-12-16, predicting for 2015-12-17
+----------------------------------------------
+Processing graph for current date 2015-12-17, predicting for 2015-12-18
+----------------------------------------------
+Processing graph for current date 2015-12-18, predicting for 2015-12-21
+----------------------------------------------
+Processing graph for current date 2015-12-21, predicting for 2015-12-22
+----------------------------------------------
+Processing graph for current date 2015-12-22, predicting for 2015-12-23
+----------------------------------------------
+Processing graph for current date 2015-12-23, predicting for 2015-12-24
+----------------------------------------------
+Processing graph for current date 2015-12-24, predicting for 2015-12-28
+----------------------------------------------
+Processing graph for current date 2015-12-28, predicting for 2015-12-29
+----------------------------------------------
+Processing graph for current date 2015-12-29, predicting for 2015-12-30
+----------------------------------------------
+Epoch 1, Average Loss: 0.6951
+Epoch 2, Average Loss: 0.6937
+Epoch 3, Average Loss: 0.6932
+Epoch 4, Average Loss: 0.6932
+Epoch 5, Average Loss: 0.6932
+Epoch 6, Average Loss: 0.6928
+Epoch 7, Average Loss: 0.6926
+Epoch 8, Average Loss: 0.6924
+Epoch 9, Average Loss: 0.6923
+Epoch 10, Average Loss: 0.6921
+Epoch 11, Average Loss: 0.6920
+Epoch 12, Average Loss: 0.6918
+Epoch 13, Average Loss: 0.6918
+Epoch 14, Average Loss: 0.6916
+Epoch 15, Average Loss: 0.6914
+Epoch 16, Average Loss: 0.6913
+Epoch 17, Average Loss: 0.6910
+Epoch 18, Average Loss: 0.6907
+Epoch 19, Average Loss: 0.6905
+Epoch 20, Average Loss: 0.6903
+Epoch 21, Average Loss: 0.6901
+Epoch 22, Average Loss: 0.6897
+Epoch 23, Average Loss: 0.6894
+Epoch 24, Average Loss: 0.6891
+Epoch 25, Average Loss: 0.6888
+Epoch 26, Average Loss: 0.6885
+Epoch 27, Average Loss: 0.6881
+Epoch 28, Average Loss: 0.6877
+Epoch 29, Average Loss: 0.6873
+Epoch 30, Average Loss: 0.6869
+Epoch 31, Average Loss: 0.6864
+Epoch 32, Average Loss: 0.6861
+Epoch 33, Average Loss: 0.6857
+Epoch 34, Average Loss: 0.6853
+Epoch 35, Average Loss: 0.6853
+Epoch 36, Average Loss: 0.6851
+Epoch 37, Average Loss: 0.6852
+Epoch 38, Average Loss: 0.6850
+Epoch 39, Average Loss: 0.6846
+Epoch 40, Average Loss: 0.6844
+Epoch 41, Average Loss: 0.6845
+Epoch 42, Average Loss: 0.6841
+Epoch 43, Average Loss: 0.6838
+Epoch 44, Average Loss: 0.6836
+Epoch 45, Average Loss: 0.6836
+Epoch 46, Average Loss: 0.6829
+Epoch 47, Average Loss: 0.6825
+Epoch 48, Average Loss: 0.6824
+Epoch 49, Average Loss: 0.6816
+Epoch 50, Average Loss: 0.6818
+Epoch 51, Average Loss: 0.6814
+Epoch 52, Average Loss: 0.6813
+Epoch 53, Average Loss: 0.6810
+Epoch 54, Average Loss: 0.6807
+Epoch 55, Average Loss: 0.6804
+Epoch 56, Average Loss: 0.6803
+Epoch 57, Average Loss: 0.6800
+Epoch 58, Average Loss: 0.6797
+Epoch 59, Average Loss: 0.6795
+Epoch 60, Average Loss: 0.6795
+Epoch 61, Average Loss: 0.6788
+Epoch 62, Average Loss: 0.6786
+Epoch 63, Average Loss: 0.6783
+Epoch 64, Average Loss: 0.6780
+Epoch 65, Average Loss: 0.6779
+Epoch 66, Average Loss: 0.6773
+Epoch 67, Average Loss: 0.6772
+Epoch 68, Average Loss: 0.6770
+Epoch 69, Average Loss: 0.6766
+Epoch 70, Average Loss: 0.6766
+Epoch 71, Average Loss: 0.6759
+Epoch 72, Average Loss: 0.6758
+Epoch 73, Average Loss: 0.6752
+Epoch 74, Average Loss: 0.6749
+Epoch 75, Average Loss: 0.6748
+
+Evaluating Sector Performance:
+
+Overall Sector Accuracy: 0.5655 (3115/5508)
+Class Breakdown (Overall Sector):
+  Correct Down Predictions: 1818 (out of 2720 actual down instances)
+  Correct Up Predictions: 1297 (out of 2788 actual up instances)
