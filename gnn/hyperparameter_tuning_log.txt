@@ -1,490 +1,186 @@
 
---- Generating data for window_size=15 ---
-
---- Tuning with window_size=15, learning_rate=0.001, epochs=1000 ---
-Epoch 10, Avg Loss: 0.6918
-Epoch 20, Avg Loss: 0.6880
-Epoch 30, Avg Loss: 0.6851
-Epoch 40, Avg Loss: 0.6820
-Epoch 50, Avg Loss: 0.6790
-Epoch 60, Avg Loss: 0.6771
-Epoch 70, Avg Loss: 0.6725
-Epoch 80, Avg Loss: 0.6666
-Epoch 90, Avg Loss: 0.6624
-Epoch 100, Avg Loss: 0.6566
-Epoch 110, Avg Loss: 0.6564
-Epoch 120, Avg Loss: 0.6482
-Epoch 130, Avg Loss: 0.6486
-Epoch 140, Avg Loss: 0.6370
-Epoch 150, Avg Loss: 0.6317
-Epoch 160, Avg Loss: 0.6436
-Epoch 170, Avg Loss: 0.6193
-Epoch 180, Avg Loss: 0.6533
-Epoch 190, Avg Loss: 0.6107
-Epoch 200, Avg Loss: 0.6060
-Epoch 210, Avg Loss: 0.5984
-Epoch 220, Avg Loss: 0.5914
-Epoch 230, Avg Loss: 0.6105
-Epoch 240, Avg Loss: 0.5794
-Epoch 250, Avg Loss: 0.5881
-Epoch 260, Avg Loss: 0.5812
-Epoch 270, Avg Loss: 0.5613
-Epoch 280, Avg Loss: 0.5641
-Epoch 290, Avg Loss: 0.5562
-Epoch 300, Avg Loss: 0.5517
-Epoch 310, Avg Loss: 0.5480
-Epoch 320, Avg Loss: 0.5576
-Epoch 330, Avg Loss: 0.5375
-Epoch 340, Avg Loss: 0.5262
-Epoch 350, Avg Loss: 0.5238
-Epoch 360, Avg Loss: 0.5309
-Epoch 370, Avg Loss: 0.5041
-Epoch 380, Avg Loss: 0.5188
-Epoch 390, Avg Loss: 0.5624
-Epoch 400, Avg Loss: 0.4968
-Epoch 410, Avg Loss: 0.5063
-Epoch 420, Avg Loss: 0.5168
-Epoch 430, Avg Loss: 0.4818
-Epoch 440, Avg Loss: 0.4909
-Epoch 450, Avg Loss: 0.4909
-Epoch 460, Avg Loss: 0.4699
-Epoch 470, Avg Loss: 0.4690
-Epoch 480, Avg Loss: 0.4839
-Epoch 490, Avg Loss: 0.4898
-Epoch 500, Avg Loss: 0.4735
-Epoch 510, Avg Loss: 0.4785
-Epoch 520, Avg Loss: 0.4648
-Epoch 530, Avg Loss: 0.4627
-Epoch 540, Avg Loss: 0.4729
-Epoch 550, Avg Loss: 0.4464
-Epoch 560, Avg Loss: 0.4402
-Epoch 570, Avg Loss: 0.4528
-Epoch 580, Avg Loss: 0.4436
-Epoch 590, Avg Loss: 0.4329
-Epoch 600, Avg Loss: 0.4610
-Epoch 610, Avg Loss: 0.4491
-Epoch 620, Avg Loss: 0.4406
-Epoch 630, Avg Loss: 0.4490
-Epoch 640, Avg Loss: 0.4315
-Epoch 650, Avg Loss: 0.4404
-Epoch 660, Avg Loss: 0.4196
-Epoch 670, Avg Loss: 0.5120
-Epoch 680, Avg Loss: 0.4466
-Epoch 690, Avg Loss: 0.4354
-Epoch 700, Avg Loss: 0.4789
-Epoch 710, Avg Loss: 0.4496
-Epoch 720, Avg Loss: 0.4034
-Epoch 730, Avg Loss: 0.4015
-Epoch 740, Avg Loss: 0.4070
-Epoch 750, Avg Loss: 0.5002
-Epoch 760, Avg Loss: 0.4204
-Epoch 770, Avg Loss: 0.3961
-Epoch 780, Avg Loss: 0.3884
-Epoch 790, Avg Loss: 0.4026
-Epoch 800, Avg Loss: 0.3980
-Epoch 810, Avg Loss: 0.4321
-Epoch 820, Avg Loss: 0.4096
-Epoch 830, Avg Loss: 0.4172
-Epoch 840, Avg Loss: 0.4847
-Epoch 850, Avg Loss: 0.4108
-Epoch 860, Avg Loss: 0.8852
-Epoch 870, Avg Loss: 0.3826
-Epoch 880, Avg Loss: 0.3859
-Epoch 890, Avg Loss: 0.4319
-Epoch 900, Avg Loss: 0.3738
-Epoch 910, Avg Loss: 0.3910
-Epoch 920, Avg Loss: 0.4738
-Epoch 930, Avg Loss: 0.3698
-Epoch 940, Avg Loss: 0.4291
-Epoch 950, Avg Loss: 0.3999
-Epoch 960, Avg Loss: 0.4039
-Epoch 970, Avg Loss: 0.4097
-Epoch 980, Avg Loss: 0.4152
-Epoch 990, Avg Loss: 0.4056
-Epoch 1000, Avg Loss: 0.4358
-Saved loss plot to loss_ws15_lr0.001.png
-
-Evaluating Sector Performance:
-
-Overall Sector Accuracy: 0.7467 (4247/5688)
-Class Breakdown (Overall Sector):
-  Correct Down Predictions: 1751 (out of 2812 actual down instances)
-  Correct Up Predictions: 2496 (out of 2876 actual up instances)
-Result: WS=15, LR=0.001, Final Avg Loss=0.4358, Accuracy=0.7467
-*** New best accuracy: 0.7467 with params: {'window_size': 15, 'learning_rate': 0.001} ***
-
---- Generating data for window_size=30 ---
-
---- Tuning with window_size=30, learning_rate=0.001, epochs=1000 ---
-Epoch 10, Avg Loss: 0.6927
-Epoch 20, Avg Loss: 0.6908
-Epoch 30, Avg Loss: 0.6883
-Epoch 40, Avg Loss: 0.6856
-Epoch 50, Avg Loss: 0.6832
-Epoch 60, Avg Loss: 0.6810
-Epoch 70, Avg Loss: 0.6781
-Epoch 80, Avg Loss: 0.6747
-Epoch 90, Avg Loss: 0.6728
-Epoch 100, Avg Loss: 0.6652
-Epoch 110, Avg Loss: 0.6600
-Epoch 120, Avg Loss: 0.6571
-Epoch 130, Avg Loss: 0.6511
-Epoch 140, Avg Loss: 0.6459
-Epoch 150, Avg Loss: 0.6413
-Epoch 160, Avg Loss: 0.6315
-Epoch 170, Avg Loss: 0.6291
-Epoch 180, Avg Loss: 0.6208
-Epoch 190, Avg Loss: 0.6108
-Epoch 200, Avg Loss: 0.6043
-Epoch 210, Avg Loss: 0.6080
-Epoch 220, Avg Loss: 0.5904
-Epoch 230, Avg Loss: 0.5913
-Epoch 240, Avg Loss: 0.5794
-Epoch 250, Avg Loss: 0.5786
-Epoch 260, Avg Loss: 0.5699
-Epoch 270, Avg Loss: 0.5643
-Epoch 280, Avg Loss: 0.5612
-Epoch 290, Avg Loss: 0.5490
-Epoch 300, Avg Loss: 0.5455
-Epoch 310, Avg Loss: 0.5460
-Epoch 320, Avg Loss: 0.5510
-Epoch 330, Avg Loss: 0.5539
-Epoch 340, Avg Loss: 0.5233
-Epoch 350, Avg Loss: 0.5150
-Epoch 360, Avg Loss: 0.5173
-Epoch 370, Avg Loss: 0.5158
-Epoch 380, Avg Loss: 0.5057
-Epoch 390, Avg Loss: 0.5007
-Epoch 400, Avg Loss: 0.4935
-Epoch 410, Avg Loss: 0.4929
-Epoch 420, Avg Loss: 0.4927
-Epoch 430, Avg Loss: 0.5023
-Epoch 440, Avg Loss: 0.4819
-Epoch 450, Avg Loss: 0.4932
-Epoch 460, Avg Loss: 0.4756
-Epoch 470, Avg Loss: 0.4682
-Epoch 480, Avg Loss: 0.4860
-Epoch 490, Avg Loss: 0.4603
-Epoch 500, Avg Loss: 0.4697
-Epoch 510, Avg Loss: 0.4714
-Epoch 520, Avg Loss: 0.4831
-Epoch 530, Avg Loss: 0.4618
-Epoch 540, Avg Loss: 0.4479
-Epoch 550, Avg Loss: 0.4587
-Epoch 560, Avg Loss: 0.4969
-Epoch 570, Avg Loss: 0.4525
-Epoch 580, Avg Loss: 0.4550
-Epoch 590, Avg Loss: 0.4682
-Epoch 600, Avg Loss: 0.4360
-Epoch 610, Avg Loss: 0.4561
-Epoch 620, Avg Loss: 0.4300
-Epoch 630, Avg Loss: 0.4386
-Epoch 640, Avg Loss: 0.4422
-Epoch 650, Avg Loss: 0.4280
-Epoch 660, Avg Loss: 0.4801
-Epoch 670, Avg Loss: 0.4574
-Epoch 680, Avg Loss: 0.4651
-Epoch 690, Avg Loss: 0.4730
-Epoch 700, Avg Loss: 0.4455
-Epoch 710, Avg Loss: 0.4694
-Epoch 720, Avg Loss: 0.4236
-Epoch 730, Avg Loss: 0.4520
-Epoch 740, Avg Loss: 0.4122
-Epoch 750, Avg Loss: 0.4278
-Epoch 760, Avg Loss: 0.3937
-Epoch 770, Avg Loss: 0.3965
-Epoch 780, Avg Loss: 0.4187
-Epoch 790, Avg Loss: 0.4263
-Epoch 800, Avg Loss: 0.3942
-Epoch 810, Avg Loss: 0.3952
-Epoch 820, Avg Loss: 0.4002
-Epoch 830, Avg Loss: 0.4271
-Epoch 840, Avg Loss: 0.4521
-Epoch 850, Avg Loss: 0.3935
-Epoch 860, Avg Loss: 0.3909
-Epoch 870, Avg Loss: 0.3954
-Epoch 880, Avg Loss: 0.4653
-Epoch 890, Avg Loss: 0.4260
-Epoch 900, Avg Loss: 0.3688
-Epoch 910, Avg Loss: 0.4093
-Epoch 920, Avg Loss: 0.4842
-Epoch 930, Avg Loss: 0.3757
-Epoch 940, Avg Loss: 0.3614
-Epoch 950, Avg Loss: 0.4231
-Epoch 960, Avg Loss: 0.3564
-Epoch 970, Avg Loss: 0.3596
-Epoch 980, Avg Loss: 0.3656
-Epoch 990, Avg Loss: 0.3937
-Epoch 1000, Avg Loss: 0.3966
-Saved loss plot to loss_ws30_lr0.001.png
-
-Evaluating Sector Performance:
-
-Overall Sector Accuracy: 0.7322 (4033/5508)
-Class Breakdown (Overall Sector):
-  Correct Down Predictions: 2079 (out of 2720 actual down instances)
-  Correct Up Predictions: 1954 (out of 2788 actual up instances)
-Result: WS=30, LR=0.001, Final Avg Loss=0.3966, Accuracy=0.7322
-
---- Generating data for window_size=60 ---
-
---- Tuning with window_size=60, learning_rate=0.001, epochs=1000 ---
-Epoch 10, Avg Loss: 0.6918
-Epoch 20, Avg Loss: 0.6890
-Epoch 30, Avg Loss: 0.6836
-Epoch 40, Avg Loss: 0.6773
-Epoch 50, Avg Loss: 0.6709
-Epoch 60, Avg Loss: 0.6653
-Epoch 70, Avg Loss: 0.6597
-Epoch 80, Avg Loss: 0.6540
-Epoch 90, Avg Loss: 0.6493
-Epoch 100, Avg Loss: 0.6429
-Epoch 110, Avg Loss: 0.6399
-Epoch 120, Avg Loss: 0.6338
-Epoch 130, Avg Loss: 0.6280
-Epoch 140, Avg Loss: 0.6213
-Epoch 150, Avg Loss: 0.6163
-Epoch 160, Avg Loss: 0.6101
-Epoch 170, Avg Loss: 0.6038
-Epoch 180, Avg Loss: 0.6006
-Epoch 190, Avg Loss: 0.5957
-Epoch 200, Avg Loss: 0.5882
-Epoch 210, Avg Loss: 0.5846
-Epoch 220, Avg Loss: 0.5814
-Epoch 230, Avg Loss: 0.5761
-Epoch 240, Avg Loss: 0.5691
-Epoch 250, Avg Loss: 0.5643
-Epoch 260, Avg Loss: 0.5576
-Epoch 270, Avg Loss: 0.5538
-Epoch 280, Avg Loss: 0.5489
-Epoch 290, Avg Loss: 0.5609
-Epoch 300, Avg Loss: 0.5398
-Epoch 310, Avg Loss: 0.5429
-Epoch 320, Avg Loss: 0.5356
-Epoch 330, Avg Loss: 0.5277
-Epoch 340, Avg Loss: 0.5284
-Epoch 350, Avg Loss: 0.5302
-Epoch 360, Avg Loss: 0.5311
-Epoch 370, Avg Loss: 0.5109
-Epoch 380, Avg Loss: 0.5320
-Epoch 390, Avg Loss: 0.5257
-Epoch 400, Avg Loss: 0.5066
-Epoch 410, Avg Loss: 0.5383
-Epoch 420, Avg Loss: 0.5010
-Epoch 430, Avg Loss: 0.4904
-Epoch 440, Avg Loss: 0.4931
-Epoch 450, Avg Loss: 0.5205
-Epoch 460, Avg Loss: 0.4834
-Epoch 470, Avg Loss: 0.4820
-Epoch 480, Avg Loss: 0.4788
-Epoch 490, Avg Loss: 0.4764
-Epoch 500, Avg Loss: 0.4722
-Epoch 510, Avg Loss: 0.4710
-Epoch 520, Avg Loss: 0.4600
-Epoch 530, Avg Loss: 0.4623
-Epoch 540, Avg Loss: 0.4642
-Epoch 550, Avg Loss: 0.4653
-Epoch 560, Avg Loss: 0.4702
-Epoch 570, Avg Loss: 0.4619
-Epoch 580, Avg Loss: 0.4401
-Epoch 590, Avg Loss: 0.4403
-Epoch 600, Avg Loss: 0.4344
-Epoch 610, Avg Loss: 0.4437
-Epoch 620, Avg Loss: 0.4299
-Epoch 630, Avg Loss: 0.4737
-Epoch 640, Avg Loss: 0.4301
-Epoch 650, Avg Loss: 0.4251
-Epoch 660, Avg Loss: 0.4136
-Epoch 670, Avg Loss: 0.4116
-Epoch 680, Avg Loss: 0.4201
-Epoch 690, Avg Loss: 0.4099
-Epoch 700, Avg Loss: 0.4004
-Epoch 710, Avg Loss: 0.4312
-Epoch 720, Avg Loss: 0.4016
-Epoch 730, Avg Loss: 0.4378
-Epoch 740, Avg Loss: 0.4420
-Epoch 750, Avg Loss: 0.4111
-Epoch 760, Avg Loss: 0.4261
-Epoch 770, Avg Loss: 0.3888
-Epoch 780, Avg Loss: 0.4547
-Epoch 790, Avg Loss: 0.4063
-Epoch 800, Avg Loss: 0.4019
-Epoch 810, Avg Loss: 0.3899
-Epoch 820, Avg Loss: 0.5283
-Epoch 830, Avg Loss: 0.4104
-Epoch 840, Avg Loss: 0.3824
-Epoch 850, Avg Loss: 0.3673
-Epoch 860, Avg Loss: 0.3949
-Epoch 870, Avg Loss: 0.3750
-Epoch 880, Avg Loss: 0.3548
-Epoch 890, Avg Loss: 0.3744
-Epoch 900, Avg Loss: 0.3867
-Epoch 910, Avg Loss: 0.5465
-Epoch 920, Avg Loss: 0.4739
-Epoch 930, Avg Loss: 0.4061
-Epoch 940, Avg Loss: 0.3653
-Epoch 950, Avg Loss: 0.3583
-Epoch 960, Avg Loss: 0.3485
-Epoch 970, Avg Loss: 0.3526
-Epoch 980, Avg Loss: 0.4287
-Epoch 990, Avg Loss: 0.4081
-Epoch 1000, Avg Loss: 0.3946
-Saved loss plot to loss_ws60_lr0.001.png
-
-Evaluating Sector Performance:
-
-Overall Sector Accuracy: 0.7537 (3880/5148)
-Class Breakdown (Overall Sector):
-  Correct Down Predictions: 1776 (out of 2551 actual down instances)
-  Correct Up Predictions: 2104 (out of 2597 actual up instances)
-Result: WS=60, LR=0.001, Final Avg Loss=0.3946, Accuracy=0.7537
-*** New best accuracy: 0.7537 with params: {'window_size': 60, 'learning_rate': 0.001} ***
-
 --- Generating data for window_size=90 ---
+Total graphs: 399, Training graphs: 319, Testing graphs: 80
 
 --- Tuning with window_size=90, learning_rate=0.001, epochs=1000 ---
-Epoch 10, Avg Loss: 0.6926
-Epoch 20, Avg Loss: 0.6911
-Epoch 30, Avg Loss: 0.6882
-Epoch 40, Avg Loss: 0.6843
-Epoch 50, Avg Loss: 0.6803
-Epoch 60, Avg Loss: 0.6767
-Epoch 70, Avg Loss: 0.6728
-Epoch 80, Avg Loss: 0.6683
-Epoch 90, Avg Loss: 0.6642
-Epoch 100, Avg Loss: 0.6599
-Epoch 110, Avg Loss: 0.6547
-Epoch 120, Avg Loss: 0.6505
-Epoch 130, Avg Loss: 0.6468
-Epoch 140, Avg Loss: 0.6426
-Epoch 150, Avg Loss: 0.6380
-Epoch 160, Avg Loss: 0.6325
-Epoch 170, Avg Loss: 0.6273
-Epoch 180, Avg Loss: 0.6223
-Epoch 190, Avg Loss: 0.6183
-Epoch 200, Avg Loss: 0.6145
-Epoch 210, Avg Loss: 0.6095
-Epoch 220, Avg Loss: 0.6054
-Epoch 230, Avg Loss: 0.6016
-Epoch 240, Avg Loss: 0.5966
-Epoch 250, Avg Loss: 0.5912
-Epoch 260, Avg Loss: 0.5867
-Epoch 270, Avg Loss: 0.5832
-Epoch 280, Avg Loss: 0.5788
-Epoch 290, Avg Loss: 0.5731
-Epoch 300, Avg Loss: 0.5660
-Epoch 310, Avg Loss: 0.5612
-Epoch 320, Avg Loss: 0.5607
-Epoch 330, Avg Loss: 0.5551
-Epoch 340, Avg Loss: 0.5523
-Epoch 350, Avg Loss: 0.5489
-Epoch 360, Avg Loss: 0.5433
-Epoch 370, Avg Loss: 0.5376
-Epoch 380, Avg Loss: 0.5323
-Epoch 390, Avg Loss: 0.5319
-Epoch 400, Avg Loss: 0.5299
-Epoch 410, Avg Loss: 0.5207
-Epoch 420, Avg Loss: 0.5228
-Epoch 430, Avg Loss: 0.5138
-Epoch 440, Avg Loss: 0.5080
-Epoch 450, Avg Loss: 0.5092
-Epoch 460, Avg Loss: 0.4979
-Epoch 470, Avg Loss: 0.4978
-Epoch 480, Avg Loss: 0.4918
-Epoch 490, Avg Loss: 0.5128
-Epoch 500, Avg Loss: 0.5228
-Epoch 510, Avg Loss: 0.4831
-Epoch 520, Avg Loss: 0.4741
-Epoch 530, Avg Loss: 0.4777
-Epoch 540, Avg Loss: 0.4715
-Epoch 550, Avg Loss: 0.4650
-Epoch 560, Avg Loss: 0.4645
-Epoch 570, Avg Loss: 0.4653
-Epoch 580, Avg Loss: 0.4687
-Epoch 590, Avg Loss: 0.4700
-Epoch 600, Avg Loss: 0.4657
-Epoch 610, Avg Loss: 0.4670
-Epoch 620, Avg Loss: 0.4532
-Epoch 630, Avg Loss: 0.4451
-Epoch 640, Avg Loss: 0.4458
-Epoch 650, Avg Loss: 0.4537
-Epoch 660, Avg Loss: 0.4390
-Epoch 670, Avg Loss: 0.4352
-Epoch 680, Avg Loss: 0.4296
-Epoch 690, Avg Loss: 0.4291
-Epoch 700, Avg Loss: 0.4198
-Epoch 710, Avg Loss: 0.4246
-Epoch 720, Avg Loss: 0.4373
-Epoch 730, Avg Loss: 0.4139
-Epoch 740, Avg Loss: 0.4476
-Epoch 750, Avg Loss: 0.4291
-Epoch 760, Avg Loss: 0.4091
-Epoch 770, Avg Loss: 0.4236
-Epoch 780, Avg Loss: 0.4080
-Epoch 790, Avg Loss: 0.4521
-Epoch 800, Avg Loss: 0.4235
-Epoch 810, Avg Loss: 0.3867
-Epoch 820, Avg Loss: 0.3878
-Epoch 830, Avg Loss: 0.3838
-Epoch 840, Avg Loss: 0.3913
-Epoch 850, Avg Loss: 0.4070
-Epoch 860, Avg Loss: 0.4254
-Epoch 870, Avg Loss: 0.3790
-Epoch 880, Avg Loss: 0.3786
-Epoch 890, Avg Loss: 0.3637
-Epoch 900, Avg Loss: 0.3640
-Epoch 910, Avg Loss: 0.3749
-Epoch 920, Avg Loss: 0.3756
-Epoch 930, Avg Loss: 0.3646
-Epoch 940, Avg Loss: 0.3773
-Epoch 950, Avg Loss: 0.3547
-Epoch 960, Avg Loss: 0.3722
-Epoch 970, Avg Loss: 0.3490
-Epoch 980, Avg Loss: 0.4075
-Epoch 990, Avg Loss: 0.3490
-Epoch 1000, Avg Loss: 0.3850
+Training on 319 graphs...
+Epoch 10, Avg Loss: 0.6934, Avg Valid Labels per Graph: 12.00
+Epoch 20, Avg Loss: 0.6930, Avg Valid Labels per Graph: 12.00
+Epoch 30, Avg Loss: 0.6919, Avg Valid Labels per Graph: 12.00
+Epoch 40, Avg Loss: 0.6892, Avg Valid Labels per Graph: 12.00
+Epoch 50, Avg Loss: 0.6855, Avg Valid Labels per Graph: 12.00
+Epoch 60, Avg Loss: 0.6805, Avg Valid Labels per Graph: 12.00
+Epoch 70, Avg Loss: 0.6754, Avg Valid Labels per Graph: 12.00
+Epoch 80, Avg Loss: 0.6697, Avg Valid Labels per Graph: 12.00
+Epoch 90, Avg Loss: 0.6631, Avg Valid Labels per Graph: 12.00
+Epoch 100, Avg Loss: 0.6564, Avg Valid Labels per Graph: 12.00
+Epoch 110, Avg Loss: 0.6543, Avg Valid Labels per Graph: 12.00
+Epoch 120, Avg Loss: 0.6476, Avg Valid Labels per Graph: 12.00
+Epoch 130, Avg Loss: 0.6432, Avg Valid Labels per Graph: 12.00
+Epoch 140, Avg Loss: 0.6362, Avg Valid Labels per Graph: 12.00
+Epoch 150, Avg Loss: 0.6298, Avg Valid Labels per Graph: 12.00
+Epoch 160, Avg Loss: 0.6247, Avg Valid Labels per Graph: 12.00
+Epoch 170, Avg Loss: 0.6204, Avg Valid Labels per Graph: 12.00
+Epoch 180, Avg Loss: 0.6155, Avg Valid Labels per Graph: 12.00
+Epoch 190, Avg Loss: 0.6079, Avg Valid Labels per Graph: 12.00
+Epoch 200, Avg Loss: 0.6018, Avg Valid Labels per Graph: 12.00
+Epoch 210, Avg Loss: 0.6011, Avg Valid Labels per Graph: 12.00
+Epoch 220, Avg Loss: 0.5934, Avg Valid Labels per Graph: 12.00
+Epoch 230, Avg Loss: 0.5881, Avg Valid Labels per Graph: 12.00
+Epoch 240, Avg Loss: 0.5813, Avg Valid Labels per Graph: 12.00
+Epoch 250, Avg Loss: 0.5767, Avg Valid Labels per Graph: 12.00
+Epoch 260, Avg Loss: 0.5666, Avg Valid Labels per Graph: 12.00
+Epoch 270, Avg Loss: 0.5649, Avg Valid Labels per Graph: 12.00
+Epoch 280, Avg Loss: 0.5563, Avg Valid Labels per Graph: 12.00
+Epoch 290, Avg Loss: 0.5541, Avg Valid Labels per Graph: 12.00
+Epoch 300, Avg Loss: 0.5475, Avg Valid Labels per Graph: 12.00
+Epoch 310, Avg Loss: 0.5468, Avg Valid Labels per Graph: 12.00
+Epoch 320, Avg Loss: 0.5381, Avg Valid Labels per Graph: 12.00
+Epoch 330, Avg Loss: 0.5412, Avg Valid Labels per Graph: 12.00
+Epoch 340, Avg Loss: 0.5323, Avg Valid Labels per Graph: 12.00
+Epoch 350, Avg Loss: 0.5211, Avg Valid Labels per Graph: 12.00
+Epoch 360, Avg Loss: 0.5150, Avg Valid Labels per Graph: 12.00
+Epoch 370, Avg Loss: 0.5118, Avg Valid Labels per Graph: 12.00
+Epoch 380, Avg Loss: 0.5421, Avg Valid Labels per Graph: 12.00
+Epoch 390, Avg Loss: 0.5009, Avg Valid Labels per Graph: 12.00
+Epoch 400, Avg Loss: 0.4940, Avg Valid Labels per Graph: 12.00
+Epoch 410, Avg Loss: 0.4964, Avg Valid Labels per Graph: 12.00
+Epoch 420, Avg Loss: 0.4923, Avg Valid Labels per Graph: 12.00
+Epoch 430, Avg Loss: 0.4924, Avg Valid Labels per Graph: 12.00
+Epoch 440, Avg Loss: 0.4801, Avg Valid Labels per Graph: 12.00
+Epoch 450, Avg Loss: 0.4863, Avg Valid Labels per Graph: 12.00
+Epoch 460, Avg Loss: 0.4603, Avg Valid Labels per Graph: 12.00
+Epoch 470, Avg Loss: 0.4783, Avg Valid Labels per Graph: 12.00
+Epoch 480, Avg Loss: 0.4562, Avg Valid Labels per Graph: 12.00
+Epoch 490, Avg Loss: 0.4572, Avg Valid Labels per Graph: 12.00
+Epoch 500, Avg Loss: 0.4621, Avg Valid Labels per Graph: 12.00
+Epoch 510, Avg Loss: 0.4642, Avg Valid Labels per Graph: 12.00
+Epoch 520, Avg Loss: 0.4386, Avg Valid Labels per Graph: 12.00
+Epoch 530, Avg Loss: 0.4383, Avg Valid Labels per Graph: 12.00
+Epoch 540, Avg Loss: 0.4234, Avg Valid Labels per Graph: 12.00
+Epoch 550, Avg Loss: 0.4232, Avg Valid Labels per Graph: 12.00
+Epoch 560, Avg Loss: 0.4129, Avg Valid Labels per Graph: 12.00
+Epoch 570, Avg Loss: 0.4175, Avg Valid Labels per Graph: 12.00
+Epoch 580, Avg Loss: 0.4106, Avg Valid Labels per Graph: 12.00
+Epoch 590, Avg Loss: 0.4071, Avg Valid Labels per Graph: 12.00
+Epoch 600, Avg Loss: 0.4019, Avg Valid Labels per Graph: 12.00
+Epoch 610, Avg Loss: 0.3893, Avg Valid Labels per Graph: 12.00
+Epoch 620, Avg Loss: 0.3862, Avg Valid Labels per Graph: 12.00
+Epoch 630, Avg Loss: 0.4008, Avg Valid Labels per Graph: 12.00
+Epoch 640, Avg Loss: 0.3907, Avg Valid Labels per Graph: 12.00
+Epoch 650, Avg Loss: 0.3816, Avg Valid Labels per Graph: 12.00
+Epoch 660, Avg Loss: 0.3779, Avg Valid Labels per Graph: 12.00
+Epoch 670, Avg Loss: 0.3804, Avg Valid Labels per Graph: 12.00
+Epoch 680, Avg Loss: 0.3787, Avg Valid Labels per Graph: 12.00
+Epoch 690, Avg Loss: 0.3699, Avg Valid Labels per Graph: 12.00
+Epoch 700, Avg Loss: 0.4305, Avg Valid Labels per Graph: 12.00
+Epoch 710, Avg Loss: 0.3649, Avg Valid Labels per Graph: 12.00
+Epoch 720, Avg Loss: 0.3628, Avg Valid Labels per Graph: 12.00
+Epoch 730, Avg Loss: 0.4012, Avg Valid Labels per Graph: 12.00
+Epoch 740, Avg Loss: 0.3585, Avg Valid Labels per Graph: 12.00
+Epoch 750, Avg Loss: 0.3520, Avg Valid Labels per Graph: 12.00
+Epoch 760, Avg Loss: 0.3462, Avg Valid Labels per Graph: 12.00
+Epoch 770, Avg Loss: 0.3407, Avg Valid Labels per Graph: 12.00
+Epoch 780, Avg Loss: 0.3302, Avg Valid Labels per Graph: 12.00
+Epoch 790, Avg Loss: 0.3312, Avg Valid Labels per Graph: 12.00
+Epoch 800, Avg Loss: 0.3498, Avg Valid Labels per Graph: 12.00
+Epoch 810, Avg Loss: 0.3188, Avg Valid Labels per Graph: 12.00
+Epoch 820, Avg Loss: 0.4108, Avg Valid Labels per Graph: 12.00
+Epoch 830, Avg Loss: 0.3357, Avg Valid Labels per Graph: 12.00
+Epoch 840, Avg Loss: 0.3186, Avg Valid Labels per Graph: 12.00
+Epoch 850, Avg Loss: 0.3146, Avg Valid Labels per Graph: 12.00
+Epoch 860, Avg Loss: 0.3895, Avg Valid Labels per Graph: 12.00
+Epoch 870, Avg Loss: 0.2996, Avg Valid Labels per Graph: 12.00
+Epoch 880, Avg Loss: 0.4017, Avg Valid Labels per Graph: 12.00
+Epoch 890, Avg Loss: 0.3566, Avg Valid Labels per Graph: 12.00
+Epoch 900, Avg Loss: 0.3412, Avg Valid Labels per Graph: 12.00
+Epoch 910, Avg Loss: 0.3034, Avg Valid Labels per Graph: 12.00
+Epoch 920, Avg Loss: 0.3229, Avg Valid Labels per Graph: 12.00
+Epoch 930, Avg Loss: 0.3104, Avg Valid Labels per Graph: 12.00
+Epoch 940, Avg Loss: 0.2769, Avg Valid Labels per Graph: 12.00
+Epoch 950, Avg Loss: 0.4373, Avg Valid Labels per Graph: 12.00
+Epoch 960, Avg Loss: 0.2815, Avg Valid Labels per Graph: 12.00
+Epoch 970, Avg Loss: 0.3165, Avg Valid Labels per Graph: 12.00
+Epoch 980, Avg Loss: 0.2659, Avg Valid Labels per Graph: 12.00
+Epoch 990, Avg Loss: 0.2956, Avg Valid Labels per Graph: 12.00
+Epoch 1000, Avg Loss: 0.3716, Avg Valid Labels per Graph: 12.00
 Saved loss plot to loss_ws90_lr0.001.png
 
-Evaluating Sector Performance:
+--- Evaluating on Training Data (during tuning) ---
 
-Overall Sector Accuracy: 0.7757 (3714/4788)
+Evaluating Model Performance:
+Evaluation based on 3828 data points from 319 graphs (avg 12.00 valid labels/graph).
+  Prediction distribution (raw outputs): Min: 0.0000, Max: 1.0000, Mean: 0.5305, Std: 0.3807
+  Number of predictions between 0.4 and 0.6: 407 (out of 3828)
+
+Overall Accuracy: 0.7900 (3024/3828)
 Class Breakdown (Overall Sector):
-  Correct Down Predictions: 1868 (out of 2374 actual down instances)
-  Correct Up Predictions: 1846 (out of 2414 actual up instances)
-Result: WS=90, LR=0.001, Final Avg Loss=0.3850, Accuracy=0.7757
-*** New best accuracy: 0.7757 with params: {'window_size': 90, 'learning_rate': 0.001} ***
+  Correct Down Predictions: 1434 (out of 1909 actual down instances)
+  Correct Up Predictions: 1590 (out of 1919 actual up instances)
+Training Accuracy (for current params): 0.7900
+
+--- Evaluating on Test Data (during tuning) ---
+
+Evaluating Model Performance:
+Evaluation based on 960 data points from 80 graphs (avg 12.00 valid labels/graph).
+  Prediction distribution (raw outputs): Min: 0.0000, Max: 1.0000, Mean: 0.4299, Std: 0.4175
+  Number of predictions between 0.4 and 0.6: 78 (out of 960)
+
+Overall Accuracy: 0.4927 (473/960)
+Class Breakdown (Overall Sector):
+  Correct Down Predictions: 261 (out of 465 actual down instances)
+  Correct Up Predictions: 212 (out of 495 actual up instances)
+Test Accuracy (for current params): 0.4927
+Result: WS=90, LR=0.001, Final Avg Loss=0.3716, Train Acc=0.7900, Test Acc=0.4927
+*** New best test accuracy: 0.4927 with params: {'window_size': 90, 'learning_rate': 0.001, 'train_accuracy_at_best_test': 0.7899686520376176} ***
 
 --- Hyperparameter Tuning Summary ---
-WS=15, LR=0.001, Final Loss=0.4358, Accuracy=0.7467
-WS=30, LR=0.001, Final Loss=0.3966, Accuracy=0.7322
-WS=60, LR=0.001, Final Loss=0.3946, Accuracy=0.7537
-WS=90, LR=0.001, Final Loss=0.3850, Accuracy=0.7757
+WS=90, LR=0.001, Final Loss=0.3716, Train Acc=0.7900, Test Acc=0.4927
 
-Best Accuracy: 0.7757
+Best Test Accuracy: 0.4927
 Best Parameters: {best_params}
 
 --- Running with Best Parameters (or default if tuning was skipped/failed) ---
 Using final parameters: window_size=90, learning_rate=0.001, epochs=100
+Final Run - Total graphs: 399, Training graphs: 319, Testing graphs: 80
 
 --- Training final model ---
-Epoch 10, Avg Loss: 0.6929
-Epoch 20, Avg Loss: 0.6919
-Epoch 30, Avg Loss: 0.6899
-Epoch 40, Avg Loss: 0.6852
-Epoch 50, Avg Loss: 0.6806
-Epoch 60, Avg Loss: 0.6758
-Epoch 70, Avg Loss: 0.6698
-Epoch 80, Avg Loss: 0.6632
-Epoch 90, Avg Loss: 0.6571
-Epoch 100, Avg Loss: 0.6502
+Training final model on 319 graphs...
+Epoch 10, Avg Loss: 0.6935, Avg Valid Labels per Graph: 12.00
+Epoch 20, Avg Loss: 0.6927, Avg Valid Labels per Graph: 12.00
+Epoch 30, Avg Loss: 0.6907, Avg Valid Labels per Graph: 12.00
+Epoch 40, Avg Loss: 0.6875, Avg Valid Labels per Graph: 12.00
+Epoch 50, Avg Loss: 0.6849, Avg Valid Labels per Graph: 12.00
+Epoch 60, Avg Loss: 0.6821, Avg Valid Labels per Graph: 12.00
+Epoch 70, Avg Loss: 0.6796, Avg Valid Labels per Graph: 12.00
+Epoch 80, Avg Loss: 0.6766, Avg Valid Labels per Graph: 12.00
+Epoch 90, Avg Loss: 0.6732, Avg Valid Labels per Graph: 12.00
+Epoch 100, Avg Loss: 0.6687, Avg Valid Labels per Graph: 12.00
 Saved loss plot to loss_wsfinal_ws90_lrfinal_lr0.001.png
 
---- Evaluating final model ---
+--- Evaluating final model on Training Data ---
 
-Evaluating Sector Performance:
+Evaluating Model Performance:
+Evaluation based on 3828 data points from 319 graphs (avg 12.00 valid labels/graph).
+  Prediction distribution (raw outputs): Min: 0.0649, Max: 0.9551, Mean: 0.5189, Std: 0.0972
+  Number of predictions between 0.4 and 0.6: 2958 (out of 3828)
 
-Overall Sector Accuracy: 0.6151 (2945/4788)
+Overall Accuracy: 0.5899 (2258/3828)
 Class Breakdown (Overall Sector):
-  Correct Down Predictions: 1199 (out of 2374 actual down instances)
-  Correct Up Predictions: 1746 (out of 2414 actual up instances)
+  Correct Down Predictions: 933 (out of 1909 actual down instances)
+  Correct Up Predictions: 1325 (out of 1919 actual up instances)
+Final Model Training Accuracy: 0.5899
+
+--- Evaluating final model on Test Data ---
+
+Evaluating Model Performance:
+Evaluation based on 960 data points from 80 graphs (avg 12.00 valid labels/graph).
+  Prediction distribution (raw outputs): Min: 0.0157, Max: 0.6375, Mean: 0.3504, Std: 0.1561
+  Number of predictions between 0.4 and 0.6: 387 (out of 960)
+
+Overall Accuracy: 0.5177 (497/960)
+Class Breakdown (Overall Sector):
+  Correct Down Predictions: 376 (out of 465 actual down instances)
+  Correct Up Predictions: 121 (out of 495 actual up instances)
+Final Model Test Accuracy: 0.5177
 \nHyperparameter tuning script finished.

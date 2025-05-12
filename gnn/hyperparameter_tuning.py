@@ -160,6 +160,8 @@ def train_gnn(model, data_list, ticker2id, epochs=5, learning_rate=0.001, curren
         model.train()
         total_loss = 0
         processed_nodes_count = 0
+        total_valid_labels_in_epoch = 0 
+        graphs_processed_in_epoch = 0 
 
         for data in data_list:
             if data.edge_index.numel() == 0 and data.x.numel() > 0 :
@@ -172,6 +174,9 @@ def train_gnn(model, data_list, ticker2id, epochs=5, learning_rate=0.001, curren
             mask = data.valid_labels_mask
             if not mask.any(): 
                 continue
+
+            total_valid_labels_in_epoch += mask.sum().item() 
+            graphs_processed_in_epoch += 1 
 
             masked_out = out[mask]
             masked_labels = data.y[mask]
@@ -194,7 +199,8 @@ def train_gnn(model, data_list, ticker2id, epochs=5, learning_rate=0.001, curren
         avg_loss_epoch = total_loss / processed_nodes_count if processed_nodes_count > 0 else float('inf')
         train_losses.append(avg_loss_epoch)
         if (epoch + 1) % 10 == 0 or epoch == epochs - 1:
-            print(f"Epoch {epoch+1}, Avg Loss: {avg_loss_epoch:.4f}")
+            avg_valid_labels_per_graph = total_valid_labels_in_epoch / graphs_processed_in_epoch if graphs_processed_in_epoch > 0 else 0 # New
+            print(f"Epoch {epoch+1}, Avg Loss: {avg_loss_epoch:.4f}, Avg Valid Labels per Graph: {avg_valid_labels_per_graph:.2f}") # Modified
 
     # Plotting loss for the current hyperparameter set
     if current_window_size_for_plot is not None and current_lr_for_plot is not None:
@@ -209,15 +215,18 @@ def train_gnn(model, data_list, ticker2id, epochs=5, learning_rate=0.001, curren
     return train_losses[-1] if train_losses else float('inf')
 
 
-def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
+def evaluate_gnn(model, data_list, ticker2id): 
     """
     Evaluate the GNN model on the whole sector.
     """
     model.eval()
     y_true_all, y_pred_all = [], []
+    all_masked_outputs = []
+    total_valid_labels_evaluated = 0 
+    graphs_evaluated = 0
     # id2ticker = {i: ticker for ticker, i in ticker2id.items()} # For detailed per-stock printing if needed
 
-    print("\nEvaluating Sector Performance:")
+    print("\nEvaluating Model Performance:") # Changed from "Sector Performance" for generality
     with torch.no_grad():
         for data_idx, data in enumerate(data_list):
             if data.edge_index.numel() == 0 and data.x.numel() > 0:
@@ -229,6 +238,9 @@ def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
             mask = data.valid_labels_mask
             if not mask.any():
                 continue
+            
+            total_valid_labels_evaluated += mask.sum().item() 
+            graphs_evaluated += 1 
 
             masked_out = out[mask]
             masked_labels = data.y[mask]
@@ -236,19 +248,31 @@ def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
             if masked_out.numel() == 0:
                 continue
 
+            all_masked_outputs.extend(masked_out.tolist())
             pred_for_valid_nodes = (masked_out > 0.5).float()
             
             y_true_all.extend(masked_labels.tolist())
             y_pred_all.extend(pred_for_valid_nodes.tolist())
 
     if not y_true_all:
-        print("\nNo valid data to evaluate for the sector.")
-        return 0.0 # Return 0 accuracy if no data
+        print("\nNo valid data to evaluate.") 
+        return 0.0
+
+    avg_valid_labels_per_graph_eval = total_valid_labels_evaluated / graphs_evaluated if graphs_evaluated > 0 else 0 
+    print(f"Evaluation based on {len(y_true_all)} data points from {graphs_evaluated} graphs (avg {avg_valid_labels_per_graph_eval:.2f} valid labels/graph).") 
+
+    # Analysis of raw predictions (New)
+    if all_masked_outputs:
+        outputs_tensor = torch.tensor(all_masked_outputs)
+        print(f"  Prediction distribution (raw outputs): Min: {outputs_tensor.min():.4f}, Max: {outputs_tensor.max():.4f}, Mean: {outputs_tensor.mean():.4f}, Std: {outputs_tensor.std():.4f}")
+        predictions_near_threshold = ((outputs_tensor > 0.4) & (outputs_tensor < 0.6)).sum().item()
+        print(f"  Number of predictions between 0.4 and 0.6: {predictions_near_threshold} (out of {len(all_masked_outputs)})")
+
 
     correct = sum([1 for yt, yp in zip(y_true_all, y_pred_all) if yt == yp])
     total = len(y_true_all)
     accuracy = correct / total if total > 0 else 0
-    print(f"\nOverall Sector Accuracy: {accuracy:.4f} ({correct}/{total})")
+    print(f"\nOverall Accuracy: {accuracy:.4f} ({correct}/{total})") # Changed
     
     actual_down = sum([1 for yt in y_true_all if yt == 0])
     actual_up = sum([1 for yt in y_true_all if yt == 1])
@@ -264,11 +288,11 @@ def evaluate_gnn(model, data_list, ticker2id): # Removed target_ticker
 # hyperparameter tuning
 output_log_file = open("hyperparameter_tuning_log.txt", "w")
 original_stdout = sys.stdout
-sys.stdout = Tee(original_stdout, output_log_file) # Redirect stdout to Tee object
+sys.stdout = Tee(original_stdout, output_log_file) 
 
 df_full = pd.read_csv("../data/dataset.csv", sep="\\t")
 
-window_sizes_to_tune = [15, 30, 60, 90]
+window_sizes_to_tune = [90]
 learning_rates_to_tune = [0.001]
 epochs_for_tuning = 1000
 
@@ -278,11 +302,22 @@ results = []
 
 for ws in window_sizes_to_tune:
     print(f"\n--- Generating data for window_size={ws} ---")
-    # Generate rolling temporal graphs for the current window size
-    data_graphs, ticker_map = generate_rolling_temporal_graphs(df_full, window_size=ws)
+    all_graphs, ticker_map = generate_rolling_temporal_graphs(df_full, window_size=ws) # Renamed data_graphs to all_graphs for clarity
     
-    if not data_graphs:
+    # if not data_graphs:
+    if not all_graphs: # Adjusted to use all_graphs
         print(f"No data generated for window_size={ws}. Skipping.")
+        continue
+
+    # Split data into training and testing sets 80%/20%
+    split_idx = int(len(all_graphs) * 0.8)
+    train_graphs = all_graphs[:split_idx]
+    test_graphs = all_graphs[split_idx:]
+
+    print(f"Total graphs: {len(all_graphs)}, Training graphs: {len(train_graphs)}, Testing graphs: {len(test_graphs)}")
+
+    if not train_graphs or not test_graphs: # Check if either is empty
+        print(f"Not enough data to split for window_size={ws}. Skipping.")
         continue
 
     for lr in learning_rates_to_tune:
@@ -290,22 +325,39 @@ for ws in window_sizes_to_tune:
     
         model_tune = StockPredictGNN(in_channels=11, edge_dim=1) 
         
-        final_loss = train_gnn(model_tune, data_graphs, ticker_map, epochs=epochs_for_tuning, learning_rate=lr, current_window_size_for_plot=ws, current_lr_for_plot=lr)
-        accuracy_eval = evaluate_gnn(model_tune, data_graphs, ticker_map)
+        # final_loss = train_gnn(model_tune, data_graphs, ticker_map, epochs=epochs_for_tuning, learning_rate=lr, current_window_size_for_plot=ws, current_lr_for_plot=lr)
+        # accuracy_eval = evaluate_gnn(model_tune, data_graphs, ticker_map)
+        print(f"Training on {len(train_graphs)} graphs...")
+        final_loss = train_gnn(model_tune, train_graphs, ticker_map, epochs=epochs_for_tuning, learning_rate=lr, current_window_size_for_plot=ws, current_lr_for_plot=lr)
         
-        results.append({'window_size': ws, 'learning_rate': lr, 'final_loss': final_loss, 'accuracy': accuracy_eval})
-        print(f"Result: WS={ws}, LR={lr}, Final Avg Loss={final_loss:.4f}, Accuracy={accuracy_eval:.4f}")
+        print("\n--- Evaluating on Training Data (during tuning) ---")
+        train_accuracy_eval = evaluate_gnn(model_tune, train_graphs, ticker_map)
+        print(f"Training Accuracy (for current params): {train_accuracy_eval:.4f}")
 
-        if accuracy_eval > best_accuracy:
-            best_accuracy = accuracy_eval
-            best_params = {'window_size': ws, 'learning_rate': lr}
-            print(f"*** New best accuracy: {best_accuracy:.4f} with params: {best_params} ***")
+        print("\n--- Evaluating on Test Data (during tuning) ---")
+        test_accuracy_eval = evaluate_gnn(model_tune, test_graphs, ticker_map)
+        print(f"Test Accuracy (for current params): {test_accuracy_eval:.4f}")
+        
+        # results.append({'window_size': ws, 'learning_rate': lr, 'final_loss': final_loss, 'accuracy': accuracy_eval})
+        # print(f"Result: WS={ws}, LR={lr}, Final Avg Loss={final_loss:.4f}, Accuracy={accuracy_eval:.4f}")
+        results.append({'window_size': ws, 'learning_rate': lr, 'final_loss': final_loss, 'train_accuracy': train_accuracy_eval, 'test_accuracy': test_accuracy_eval})
+        print(f"Result: WS={ws}, LR={lr}, Final Avg Loss={final_loss:.4f}, Train Acc={train_accuracy_eval:.4f}, Test Acc={test_accuracy_eval:.4f}")
+
+        # if accuracy_eval > best_accuracy:
+        #     best_accuracy = accuracy_eval
+        #     best_params = {'window_size': ws, 'learning_rate': lr}
+        #     print(f"*** New best accuracy: {best_accuracy:.4f} with params: {best_params} ***")
+        if test_accuracy_eval > best_accuracy: # Base best_accuracy on test set performance
+            best_accuracy = test_accuracy_eval
+            best_params = {'window_size': ws, 'learning_rate': lr, 'train_accuracy_at_best_test': train_accuracy_eval}
+            print(f"*** New best test accuracy: {best_accuracy:.4f} with params: {best_params} ***")
 
 print("\n--- Hyperparameter Tuning Summary ---")
 for res in results:
-    print(f"WS={res['window_size']}, LR={res['learning_rate']}, Final Loss={res['final_loss']:.4f}, Accuracy={res['accuracy']:.4f}")
+    # print(f"WS={res['window_size']}, LR={res['learning_rate']}, Final Loss={res['final_loss']:.4f}, Accuracy={res['accuracy']:.4f}")
+    print(f"WS={res['window_size']}, LR={res['learning_rate']}, Final Loss={res['final_loss']:.4f}, Train Acc={res['train_accuracy']:.4f}, Test Acc={res['test_accuracy']:.4f}")
 
-print(f"\nBest Accuracy: {best_accuracy:.4f}")
+print(f"\nBest Test Accuracy: {best_accuracy:.4f}")
 print(f"Best Parameters: {{best_params}}")
 
 print("\n--- Running with Best Parameters (or default if tuning was skipped/failed) ---")
@@ -317,29 +369,43 @@ final_epochs = 100 # Longer training with best params
 
 print(f"Using final parameters: window_size={final_window_size}, learning_rate={final_learning_rate}, epochs={final_epochs}")
 
-data_final, ticker2id_final = generate_rolling_temporal_graphs(df_full, window_size=final_window_size)
+# data_final, ticker2id_final = generate_rolling_temporal_graphs(df_full, window_size=final_window_size)
+all_data_final, ticker2id_final = generate_rolling_temporal_graphs(df_full, window_size=final_window_size)
 
-if not data_final:
+# if not data_final:
+if not all_data_final:
     print("No data generated for final training run. Exiting.")
     # sys.exit() # Consider exiting if no data
 else:
-    model_final = StockPredictGNN(in_channels=11, edge_dim=1)
-    print("\n--- Training final model ---")
-    train_gnn(model_final, data_final, ticker2id_final, epochs=final_epochs, learning_rate=final_learning_rate, current_window_size_for_plot=f"final_ws{final_window_size}", current_lr_for_plot=f"final_lr{final_learning_rate}")
-    print("\n--- Evaluating final model ---")
-    evaluate_gnn(model_final, data_final, ticker2id_final)
+    # Split final data into training and testing sets (80-20 split)
+    final_split_idx = int(len(all_data_final) * 0.8)
+    final_train_graphs = all_data_final[:final_split_idx]
+    final_test_graphs = all_data_final[final_split_idx:]
 
-# plt.clf()
-# plt.title("Accuracy vs Epochs (Example)")
-# plt.plot([10, 20, 30, 40, 50], [0.55, 0.60, 0.62, 0.65, 0.67]) # Placeholder data
-# plt.xlabel("Epochs")
-# plt.ylabel("Accuracy")
-# plt.savefig("final_accuracy_vs_epochs_example.png")
-# print("Saved example accuracy vs epochs plot.")
+    print(f"Final Run - Total graphs: {len(all_data_final)}, Training graphs: {len(final_train_graphs)}, Testing graphs: {len(final_test_graphs)}")
+
+    if not final_train_graphs or not final_test_graphs:
+        print("Not enough data for final train/test split. Exiting.")
+    else:
+        model_final = StockPredictGNN(in_channels=11, edge_dim=1)
+        print("\n--- Training final model ---")
+        # train_gnn(model_final, data_final, ticker2id_final, epochs=final_epochs, learning_rate=final_learning_rate, current_window_size_for_plot=f"final_ws{final_window_size}", current_lr_for_plot=f"final_lr{final_learning_rate}")
+        # print("\n--- Evaluating final model ---")
+        # evaluate_gnn(model_final, data_final, ticker2id_final)
+        print(f"Training final model on {len(final_train_graphs)} graphs...")
+        train_gnn(model_final, final_train_graphs, ticker2id_final, epochs=final_epochs, learning_rate=final_learning_rate, current_window_size_for_plot=f"final_ws{final_window_size}", current_lr_for_plot=f"final_lr{final_learning_rate}")
+        
+        print("\n--- Evaluating final model on Training Data ---")
+        final_train_accuracy = evaluate_gnn(model_final, final_train_graphs, ticker2id_final)
+        print(f"Final Model Training Accuracy: {final_train_accuracy:.4f}")
+
+        print("\n--- Evaluating final model on Test Data ---")
+        final_test_accuracy = evaluate_gnn(model_final, final_test_graphs, ticker2id_final)
+        print(f"Final Model Test Accuracy: {final_test_accuracy:.4f}")
+
 
 print("\\nHyperparameter tuning script finished.")
-
-# Restore original stdout and close the file at the very end
-if isinstance(sys.stdout, Tee): # Check if stdout is our Tee object
-    sys.stdout = sys.stdout.stream1 # Restore original stdout
+#idk why we need this but it reset the stdout state for next run
+if isinstance(sys.stdout, Tee): 
+    sys.stdout = sys.stdout.stream1 
 output_log_file.close()
