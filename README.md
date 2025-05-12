@@ -1,6 +1,7 @@
-## data preprocessing
+## Directions
 
-### sentiment analysis
+Run python gnn/rolling_window_gnn.py
+
 ## stocknet-dataset
 
 This repository releases a comprehensive dataset for stock movement prediction from tweets and historical stock prices. Please cite the following paper [[bib](https://aclanthology.info/papers/P18-1183/p18-1183.bib)] if you use this dataset,  
