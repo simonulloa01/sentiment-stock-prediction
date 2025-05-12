@@ -1,6 +1,6 @@
 ## Directions
 
-Run python gnn/rolling_window_gnn.py
+Run ```python gnn/rolling_window_gnn.py```
 
 ## stocknet-dataset
 
